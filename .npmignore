@@ -1,5 +1,7 @@
 .eslintrc.cjs
 .prettierrc
+.svelte-kit
 docs
 src
-vite.connfig.ts
+svelte.config.js
+vite.config.ts
