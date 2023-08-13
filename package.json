@@ -1,6 +1,6 @@
 {
 	"name": "@terrazzo/tiles",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"author": {
 		"name": "Drew Powers",
 		"email": "drew@pow.rs"
@@ -17,7 +17,7 @@
 		"./*": "./*"
 	},
 	"scripts": {
-		"build": "del dist && mkdir -p dist && run-p -s prepare:* && cp -r \"src/*\" dist && del dist/lib && tsc",
+		"build": "del dist && mkdir -p dist && run-p -s prepare:* && cp -r src/* dist && del dist/lib && tsc",
 		"build:docs": "run-s -s prepare:* && vite build",
 		"dev": "run-p -s prepare:* && vite dev",
 		"format": "prettier --write src",
