@@ -1,0 +1,284 @@
+color:
+  $type: color
+  gray:
+    10:
+      $value: oklch(10% 0.01 210)
+    15:
+      $value: oklch(15% 0.01 210)
+    20:
+      $value: oklch(20% 0.01 210)
+    25:
+      $value: oklch(25% 0.01 210)
+    30:
+      $value: oklch(30% 0.01 210)
+    35:
+      $value: oklch(35% 0.01 210)
+    40:
+      $value: oklch(40% 0.01 210)
+    50:
+      $value: oklch(50% 0.01 210)
+    60:
+      $value: oklch(60% 0.01 210)
+    70:
+      $value: oklch(70% 0.01 210)
+    80:
+      $value: oklch(80% 0.01 210)
+    85:
+      $value: oklch(85% 0.0075 210)
+    90:
+      $value: oklch(90% 0.005 210)
+    95:
+      $value: oklch(95% 0.001 210)
+    100:
+      $value: oklch(100% 0 210)
+  red:
+    10:
+      $value: oklch(10% 0.021349 235.454484)
+    15:
+      $value: oklch(15.499998% 0.007677 320.079087)
+    20:
+      $value: oklch(20.999996% 0.025102 17.938732)
+    25:
+      $value: oklch(26.499994% 0.046575 25.961649)
+    30:
+      $value: oklch(31.999992% 0.068384 28.898286)
+    40:
+      $value: oklch(42.999989% 0.112226 31.335438)
+    50:
+      $value: oklch(53.999985% 0.156157 32.402457)
+    60:
+      $value: oklch(64.999981% 0.200118 33.000816)
+    70:
+      $value: oklch(73.749924% 0.161864 33.00085)
+    80:
+      $value: oklch(82.4999% 0.098816 33.000949)
+    85:
+      $value: oklch(86.874932% 0.071136 33.000967)
+    90:
+      $value: oklch(91.249969% 0.04561 33.000946)
+    95:
+      $value: oklch(95.624992% 0.021975 33.000926)
+    100:
+      $value: oklch(99.999999% 0 0)
+  ui:
+    bg:
+      $value: "{color.ui.contrast.00}"
+    contrast:
+      $description: Gray color that adjusts to color mode. The higher the number, the higher the contrast from the background.
+      "00":
+        $value: "{color.gray.100}"
+        $extensions:
+          mode:
+            light: "{color.gray.100}"
+            dark: "{color.gray.10}"
+      "05":
+        $value: "{color.gray.95}"
+        $extensions:
+          mode:
+            light: "{color.gray.95}"
+            dark: "{color.gray.15}"
+      10:
+        $value: "{color.gray.90}"
+        $extensions:
+          mode:
+            light: "{color.gray.90}"
+            dark: "{color.gray.20}"
+      15:
+        $value: "{color.gray.85}"
+        $extensions:
+          mode:
+            light: "{color.gray.85}"
+            dark: "{color.gray.20}"
+      20:
+        $value: "{color.gray.80}"
+        $extensions:
+          mode:
+            light: "{color.gray.80}"
+            dark: "{color.gray.25}"
+      30:
+        $value: "{color.gray.70}"
+        $extensions:
+          mode:
+            light: "{color.gray.70}"
+            dark: "{color.gray.35}"
+      40:
+        $value: "{color.gray.60}"
+        $extensions:
+          mode:
+            light: "{color.gray.60}"
+            dark: "{color.gray.40}"
+      50:
+        $value: "{color.gray.50}"
+        $extensions:
+          mode:
+            light: "{color.gray.50}"
+            dark: "{color.gray.50}"
+      60:
+        $value: "{color.gray.40}"
+        $extensions:
+          mode:
+            light: "{color.gray.40}"
+            dark: "{color.gray.60}"
+      70:
+        $value: "{color.gray.30}"
+        $extensions:
+          mode:
+            light: "{color.gray.30}"
+            dark: "{color.gray.70}"
+      80:
+        $value: "{color.gray.25}"
+        $extensions:
+          mode:
+            light: "{color.gray.25}"
+            dark: "{color.gray.80}"
+      85:
+        $value: "{color.gray.20}"
+        $extensions:
+          mode:
+            light: "{color.gray.20}"
+            dark: "{color.gray.85}"
+      90:
+        $value: "{color.gray.15}"
+        $extensions:
+          mode:
+            light: "{color.gray.15}"
+            dark: "{color.gray.90}"
+      95:
+        $value: "{color.gray.10}"
+        $extensions:
+          mode:
+            light: "{color.gray.10}"
+            dark: "{color.gray.95}"
+    error:
+      10:
+        $value: "{color.red.10}"
+      15:
+        $value: "{color.red.15}"
+      20:
+        $value: "{color.red.20}"
+      25:
+        $value: "{color.red.25}"
+      30:
+        $value: "{color.red.30}"
+      40:
+        $value: "{color.red.40}"
+      50:
+        $value: "{color.red.50}"
+      60:
+        $value: "{color.red.60}"
+      70:
+        $value: "{color.red.70}"
+      80:
+        $value: "{color.red.80}"
+      85:
+        $value: "{color.red.85}"
+      90:
+        $value: "{color.red.90}"
+      95:
+        $value: "{color.red.95}"
+      100:
+        $value: "{color.red.100}"
+    fg:
+      $value: "{color.ui.contrast.90}"
+ease:
+  $description: Easing curves
+  $type: cubicBezier
+  circ-in:
+    $value: [0.55, 0, 1, 0.45]
+  circ-out:
+    $value: [0.33, 1, 0.68, 1]
+  circ-in-out:
+    $value: [0.85, 0, 0.15, 1]
+  cubic-in:
+    $value: [0.32, 0, 0.67, 0]
+  cubic-in-out:
+    $value: [0.65, 0, 0.35, 1]
+  cubic-out:
+    $value: [0.33, 1, 0.68, 1]
+  linear:
+    $value: [0, 0, 1, 1]
+timing:
+  $type: duration
+  quick:
+    $value: 100ms
+  deliberate:
+    $value: 200ms
+  slow:
+    $value: 1000ms
+typography:
+  $type: typography
+  family:
+    base:
+      $type: fontFamily
+      $value:
+        - PPNeueMontreal
+        - system-ui
+        - -apple-system
+        - Helvetica Neue
+        - Arial
+        - sans-serif
+    mono:
+      $type: fontFamily
+      $value:
+        - ui-monospace
+        - monospace
+  base:
+    $value:
+      fontFamily: "{typography.family.base}"
+      fontSize: 0.875rem
+      fontStretch: 100%
+      fontWeight: 400
+      lineHeight: 1.2
+      textTransform: none
+  mono:
+    $value:
+      fontFamily: "{typography.family.mono}"
+      fontSize: 0.875rem
+      fontStretch: 100%
+      fontWeight: 400
+      lineHeight: 1.5
+      textTransform: none
+layer:
+  $description: App layers
+  $type: number
+  base:
+    $value: 10
+  float:
+    $value: 20
+  popover:
+    $value: 30
+  nav:
+    $value: 40
+  modal:
+    $value: 80
+  alert:
+    $value: 100
+size:
+  $type: dimension
+  s:
+    height:
+      $value: 1.75rem
+    padding:
+      $value: 0.5rem
+    radius:
+      $value: 0.375rem
+    textSize:
+      $value: 0.75rem
+  m:
+    height:
+      $value: 2rem
+    padding:
+      $value: 0.75rem
+    radius:
+      $value: 0.375rem
+    textSize:
+      $value: 1rem
+  l:
+    height:
+      $value: 2.5rem
+    padding:
+      $value: 1rem
+    radius:
+      $value: 0.75rem
+    textSize:
+      $value: 1.25rem

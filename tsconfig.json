@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"lib": ["DOM", "ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "NodeNext",
+		"noImplicitAny": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"outDir": "dist",
+		"strict": true
+	},
+	"include": ["src"]
+}
