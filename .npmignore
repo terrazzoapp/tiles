@@ -1,3 +1,4 @@
+.changeset
 .eslintrc.cjs
 .prettierrc
 .svelte-kit

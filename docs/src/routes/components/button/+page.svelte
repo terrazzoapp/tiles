@@ -5,6 +5,9 @@
 	const code = `import Button from '@terrazzo/tiles/button.svelte';
 
 <Button>Click me</Button>`;
+
+	const sizes = ['m', 's', 'l'] as const;
+	const variants = ['default', 'primary', 'danger'] as const;
 </script>
 
 <svelte:head>
@@ -29,14 +32,20 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each ['default', 'primary', 'error'] as variant}
+				{#each variants as variant}
 					<tr>
 						<th scope="row">variant="{variant}"</th>
-						{#each ['m', 's', 'l'] as size}
-							<td><Button {size} {variant}>{variant} ({size})</Button></td>
+						{#each sizes as size}
+							<td><Button {size} {variant}><span class="button-name">{variant} ({size})</span></Button></td>
 						{/each}
 					</tr>
 				{/each}
+				<tr>
+					<th scope="row">disabled</th>
+					{#each sizes as size}
+						<td><Button {size} disabled><span class="button-name">Disabled ({size})</span></Button></td>
+					{/each}
+				</tr>
 			</tbody>
 		</table>
 	</Example>
@@ -64,5 +73,9 @@
 
 	td {
 		padding: 0.5rem;
+	}
+
+	.button-name {
+		text-transform: capitalize;
 	}
 </style>

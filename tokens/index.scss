@@ -187,6 +187,13 @@ $__token-values: (
   ),
   "color.ui.bg": (
     default: (var(--color-ui-bg)),
+    "light": (var(--color-ui-bg)),
+    "dark": (var(--color-ui-bg)),
+  ),
+  "color.ui.bg-offset": (
+    default: (var(--color-ui-bg-offset)),
+    "light": (var(--color-ui-bg-offset)),
+    "dark": (var(--color-ui-bg-offset)),
   ),
   "color.ui.contrast.10": (
     default: (var(--color-ui-contrast-10)),
@@ -302,6 +309,9 @@ $__token-values: (
   ),
   "color.ui.fg": (
     default: (var(--color-ui-fg)),
+  ),
+  "color.ui.fg-subdue": (
+    default: (var(--color-ui-fg-subdue)),
   ),
   "ease.circ-in": (
     default: (var(--ease-circ-in)),

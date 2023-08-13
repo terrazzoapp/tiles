@@ -20,7 +20,6 @@
 
 <script lang="ts">
 	import * as shikiJS from 'shiki';
-	import Button from './button.svelte';
 	import { omit } from './lib/props.js';
 
 	// props
@@ -35,12 +34,6 @@
 	export let startingLineNumber = 1;
 	/** show copy button? (default: `true`) */
 	export let showCopy = true;
-	/** copy text (default: 'copy') */
-	export let copyText = 'copy';
-	/** copied text (default: 'copied') */
-	export let copiedText = 'copied';
-	/** “copied” text duration in milliseconds (default: `2000`) */
-	export let copiedDuration = 2000;
 	/** configure Shiki */
 	export let shiki: ShikiOptions = {
 		highlighter: {
@@ -52,20 +45,12 @@
 
 	// state
 	let highlighter: shikiJS.Highlighter | undefined;
-	let copyMessage = copyText;
-	let copyTimeout: number;
 
 	// methods
 	function handleCopy(): void {
-		console.log({ code });
-		if (!code) return;
-		clearTimeout(copyTimeout);
-		navigator.clipboard.writeText(code).then(() => {
-			copyMessage = copiedText;
-			copyTimeout = setTimeout(() => {
-				copyMessage = copyText;
-			}, copiedDuration);
-		});
+		if (code) {
+			navigator.clipboard.writeText(code);
+		}
 	}
 
 	// reactivity
@@ -92,17 +77,26 @@
 	$: rootStyle = rootStyleMatch?.[1];
 </script>
 
-<div class="code" style={`--pocky-code-starting-line-no:${startingLineNumber}`}>
+<div class="wrapper">
 	{#if showCopy}
-		<div class="code-menu" role="menu"><Button size="s" on:click={handleCopy}>{copyMessage}</Button></div>
+		<div class="menu" role="menu">
+			<button class="copy-button" type="button" on:click={handleCopy} aria-label="copy"
+				><svg class="copy-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M9,2 C7.89543,2 7,2.89543 7,4 L7,6 L9,6 L9,4 L20,4 L20,15 L18,15 L18,17 L20,17 C21.1046,17 22,16.1046 22,15 L22,4 C22,2.89543 21.1046,2 20,2 L9,2 Z M4,7 C2.89543,7 2,7.89543 2,9 L2,20 C2,21.1046 2.89543,22 4,22 L15,22 C16.1046,22 17,21.1046 17,20 L17,9 C17,7.89543 16.1046,7 15,7 L4,7 Z M4,9 L15,9 L15,20 L4,20 L4,9 Z"
+						fill="currentColor"
+					/></svg
+				></button
+			>
+		</div>
 	{/if}
-	<div class="code-window">
+	<div class="window">
 		{#if lineNumbers}
-			<div class="code-linenumbers" style={rootStyle}>
-				{#each Array(lineCount) as _, i}<div class="code-linenumber">{startingLineNumber + i}</div>{/each}
+			<div class="linenumbers" style={rootStyle}>
+				{#each Array(lineCount) as _, i}<div class="linenumber">{startingLineNumber + i}</div>{/each}
 			</div>
 		{/if}
-		<div class="code-code" {...omit($$props, ['code', 'copiedDuration', 'copiedText', 'copyText', 'lang', 'lineNumbers', 'showCopy', 'shiki', 'startingLineNumber'])}>
+		<div class="code" {...omit($$props, ['code', 'copiedDuration', 'copiedText', 'copyText', 'lang', 'lineNumbers', 'showCopy', 'shiki', 'startingLineNumber'])}>
 			{#if codeHtml}{@html codeHtml}{:else}<pre><code>{code}</code></pre>{/if}
 		</div>
 	</div>
@@ -111,7 +105,7 @@
 <style lang="scss">
 	@use '../tokens' as *;
 
-	.code {
+	.wrapper {
 		@include typography('typography.mono');
 
 		border-radius: token('size.s.radius');
@@ -127,39 +121,67 @@
 			padding: token('size.m.padding');
 			width: 100%;
 		}
+	}
 
-		// subcomponents
+	.code {
+		box-sizing: border-box;
+		display: flex;
+		overflow-x: auto;
+		width: 100%;
+	}
 
-		&-code {
-			box-sizing: border-box;
-			display: flex;
-			overflow-x: auto;
-			width: 100%;
+	.copy-button {
+		align-items: center;
+		background: transparent;
+		border-radius: token('size.m.radius');
+		border: none;
+		color: token('color.white');
+		cursor: pointer;
+		display: flex;
+		height: 2.5rem;
+		justify-content: center;
+		padding: 0;
+		opacity: 0.7;
+		width: 2.5rem;
+
+		&:hover,
+		&:focus-visible {
+			opacity: 1;
 		}
 
-		&-inner {
-			padding-right: token('size.s.padding');
+		&:active {
+			opacity: 0.7;
 		}
+	}
 
-		&-linenumber {
-			opacity: 0.5;
-		}
+	.copy-icon {
+		height: 1rem;
+		width: 1rem;
+	}
 
-		&-linenumbers {
-			padding-left: token('size.m.padding');
-			padding-top: token('size.m.padding');
-			text-align: right;
-		}
+	.inner {
+		padding-right: token('size.s.padding');
+	}
 
-		&-menu {
-			right: 0.75rem;
-			top: 0.75rem;
-			position: absolute;
-		}
+	.linenumber {
+		opacity: 0.5;
+	}
 
-		&-window {
-			display: flex;
-			width: 100%;
-		}
+	.linenumbers {
+		padding-left: token('size.m.padding');
+		padding-top: token('size.m.padding');
+		text-align: right;
+	}
+
+	.menu {
+		right: 0;
+		top: 0;
+		position: absolute;
+		z-index: token('layer.nav');
+	}
+
+	.window {
+		display: flex;
+		width: 100%;
 	}
 </style>

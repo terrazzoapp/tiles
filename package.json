@@ -17,24 +17,27 @@
 		"./*": "./*"
 	},
 	"scripts": {
-		"build": "del dist && mkdir -p dist && run-p -s prepare:* && cp -r src/* dist && rm -rf dist/lib && tsc",
-		"build:docs": "run-p -s prepare:* && vite build",
-		"dev": "run-p -s prepare:* && vite dev",
+		"build": "del dist && mkdir -p dist && run-p -s \"prepare:*\" && cp -r src/* dist && del dist/lib && tsc",
+		"build:docs": "run-s -s \"prepare:*\" && vite build",
+		"dev": "run-p -s \"prepare:*\" && vite dev",
 		"format": "prettier --write src",
-		"lint": "run-p -s lint:*",
+		"lint": "run-p -s \"lint:*\"",
 		"lint:js": "eslint \"src/**/*.{js,ts,svelte}\"",
 		"lint:prettier": "prettier --check \"src/**/*.{js,ts,svelte}\"",
-		"prepare:shiki": "rm -rf docs/static/assets/shiki && cp -r node_modules/shiki docs/static/assets",
+		"prepare:shiki": "cp -r node_modules/shiki docs/static/assets",
 		"prepare:tokens": "co build",
 		"prepublishOnly": "pnpm run build",
-		"test": "run-p -s test:*",
+		"test": "run-p -s \"test:*\"",
 		"test:js": "vitest run",
-		"test:ts": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+		"test:ts": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"version": "pnpm run build && changeset version && pnpm i"
 	},
 	"peerDependencies": {
 		"svelte": ">= 3"
 	},
 	"devDependencies": {
+		"@changesets/changelog-github": "^0.4.8",
+		"@changesets/cli": "^2.26.2",
 		"@cobalt-ui/cli": "^1.4.0",
 		"@cobalt-ui/plugin-sass": "^1.2.3",
 		"@sveltejs/adapter-cloudflare": "^2.3.2",

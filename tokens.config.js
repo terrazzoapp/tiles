@@ -7,7 +7,12 @@ export default {
 	plugins: [
 		sass({
 			cssVars: true,
-			pluginCSS: true,
+			pluginCSS: {
+				modeSelectors: {
+					'color#light': ['@media (prefers-color-scheme: light)', '[data-color-mode="light"]'],
+					'color#dark': ['@media (prefers-color-scheme: dark)', '[data-color-mode="dark"]'],
+				},
+			},
 		}),
 	],
 };

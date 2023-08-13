@@ -124,7 +124,19 @@ color:
       100:
         $value: '{color.blue.100}'
     bg:
+      $description: The default background color. In light mode, this is a very light gray. In dark mode, this is black.
+      $value: '{color.ui.contrast.05}'
+      $extensions:
+        mode:
+          light: '{color.ui.contrast.05#light}'
+          dark: '{color.ui.contrast.00#dark}'
+    bg-offset:
+      $description: Used to create a layer on top of the default background color. In both light and dark mode this is one step lighter.
       $value: '{color.ui.contrast.00}'
+      $extensions:
+        mode:
+          light: '{color.ui.contrast.00#light}'
+          dark: '{color.ui.contrast.10#dark}'
     contrast:
       $description: Gray color that adjusts to color mode. The higher the number, the higher the contrast from the background.
       '00':
@@ -241,7 +253,11 @@ color:
       100:
         $value: '{color.red.100}'
     fg:
+      $description: The default foreground color. This is by default high contrast with the background.
       $value: '{color.ui.contrast.90}'
+    fg-subdue:
+      $description: A slightly less-contrast-y foreground color. Used for text that is less important than default.
+      $value: '{color.ui.contrast.70}'
 ease:
   $description: Easing curves
   $type: cubicBezier
