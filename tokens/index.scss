@@ -9,245 +9,335 @@
 
 $__token-values: (
   "color.gray.10": (
-    default: (#010405),
+    default: (var(--color-gray-10)),
   ),
   "color.gray.15": (
-    default: (#070c0d),
+    default: (var(--color-gray-15)),
   ),
   "color.gray.20": (
-    default: (#111719),
+    default: (var(--color-gray-20)),
   ),
   "color.gray.25": (
-    default: (#1c2324),
+    default: (var(--color-gray-25)),
   ),
   "color.gray.30": (
-    default: (#282f31),
+    default: (var(--color-gray-30)),
   ),
   "color.gray.35": (
-    default: (#353c3d),
+    default: (var(--color-gray-35)),
   ),
   "color.gray.40": (
-    default: (#42494b),
+    default: (var(--color-gray-40)),
   ),
   "color.gray.50": (
-    default: (#5d6566),
+    default: (var(--color-gray-50)),
   ),
   "color.gray.60": (
-    default: (#7a8283),
+    default: (var(--color-gray-60)),
   ),
   "color.gray.70": (
-    default: (#98a0a2),
+    default: (var(--color-gray-70)),
   ),
   "color.gray.80": (
-    default: (#b7c0c1),
+    default: (var(--color-gray-80)),
   ),
   "color.gray.85": (
-    default: (#c8cfd0),
+    default: (var(--color-gray-85)),
   ),
   "color.gray.90": (
-    default: (#dadfe0),
+    default: (var(--color-gray-90)),
   ),
   "color.gray.95": (
-    default: (#eeefef),
+    default: (var(--color-gray-95)),
   ),
   "color.gray.100": (
-    default: (#ffffff),
+    default: (var(--color-gray-100)),
+  ),
+  "color.black": (
+    default: (var(--color-black)),
+  ),
+  "color.blue.10": (
+    default: (var(--color-blue-10)),
+  ),
+  "color.blue.15": (
+    default: (var(--color-blue-15)),
+  ),
+  "color.blue.20": (
+    default: (var(--color-blue-20)),
+  ),
+  "color.blue.25": (
+    default: (var(--color-blue-25)),
+  ),
+  "color.blue.30": (
+    default: (var(--color-blue-30)),
+  ),
+  "color.blue.40": (
+    default: (var(--color-blue-40)),
+  ),
+  "color.blue.50": (
+    default: (var(--color-blue-50)),
+  ),
+  "color.blue.60": (
+    default: (var(--color-blue-60)),
+  ),
+  "color.blue.70": (
+    default: (var(--color-blue-70)),
+  ),
+  "color.blue.80": (
+    default: (var(--color-blue-80)),
+  ),
+  "color.blue.85": (
+    default: (var(--color-blue-85)),
+  ),
+  "color.blue.90": (
+    default: (var(--color-blue-90)),
+  ),
+  "color.blue.95": (
+    default: (var(--color-blue-95)),
+  ),
+  "color.blue.100": (
+    default: (var(--color-blue-100)),
   ),
   "color.red.10": (
-    default: (#000408),
+    default: (var(--color-red-10)),
   ),
   "color.red.15": (
-    default: (#0e0b0e),
+    default: (var(--color-red-15)),
   ),
   "color.red.20": (
-    default: (#231414),
+    default: (var(--color-red-20)),
   ),
   "color.red.25": (
-    default: (#391c19),
+    default: (var(--color-red-25)),
   ),
   "color.red.30": (
-    default: (#50241e),
+    default: (var(--color-red-30)),
   ),
   "color.red.40": (
-    default: (#823326),
+    default: (var(--color-red-40)),
   ),
   "color.red.50": (
-    default: (#b8422d),
+    default: (var(--color-red-50)),
   ),
   "color.red.60": (
-    default: (#f05132),
+    default: (var(--color-red-60)),
   ),
   "color.red.70": (
-    default: (#ff7f64),
+    default: (var(--color-red-70)),
   ),
   "color.red.80": (
-    default: (#ffae9c),
+    default: (var(--color-red-80)),
   ),
   "color.red.85": (
-    default: (#ffc4b6),
+    default: (var(--color-red-85)),
   ),
   "color.red.90": (
-    default: (#ffd8cf),
+    default: (var(--color-red-90)),
   ),
   "color.red.95": (
-    default: (#ffece7),
+    default: (var(--color-red-95)),
   ),
   "color.red.100": (
-    default: (#ffffff),
+    default: (var(--color-red-100)),
+  ),
+  "color.white": (
+    default: (var(--color-white)),
+  ),
+  "color.ui.action.10": (
+    default: (var(--color-ui-action-10)),
+  ),
+  "color.ui.action.15": (
+    default: (var(--color-ui-action-15)),
+  ),
+  "color.ui.action.20": (
+    default: (var(--color-ui-action-20)),
+  ),
+  "color.ui.action.25": (
+    default: (var(--color-ui-action-25)),
+  ),
+  "color.ui.action.30": (
+    default: (var(--color-ui-action-30)),
+  ),
+  "color.ui.action.40": (
+    default: (var(--color-ui-action-40)),
+  ),
+  "color.ui.action.50": (
+    default: (var(--color-ui-action-50)),
+  ),
+  "color.ui.action.60": (
+    default: (var(--color-ui-action-60)),
+  ),
+  "color.ui.action.70": (
+    default: (var(--color-ui-action-70)),
+  ),
+  "color.ui.action.80": (
+    default: (var(--color-ui-action-80)),
+  ),
+  "color.ui.action.85": (
+    default: (var(--color-ui-action-85)),
+  ),
+  "color.ui.action.90": (
+    default: (var(--color-ui-action-90)),
+  ),
+  "color.ui.action.95": (
+    default: (var(--color-ui-action-95)),
+  ),
+  "color.ui.action.100": (
+    default: (var(--color-ui-action-100)),
   ),
   "color.ui.bg": (
-    default: (#ffffff),
+    default: (var(--color-ui-bg)),
   ),
   "color.ui.contrast.10": (
-    default: (#dadfe0),
-    "light": (#dadfe0),
-    "dark": (#111719),
+    default: (var(--color-ui-contrast-10)),
+    "light": (var(--color-ui-contrast-10)),
+    "dark": (var(--color-ui-contrast-10)),
   ),
   "color.ui.contrast.15": (
-    default: (#c8cfd0),
-    "light": (#c8cfd0),
-    "dark": (#111719),
+    default: (var(--color-ui-contrast-15)),
+    "light": (var(--color-ui-contrast-15)),
+    "dark": (var(--color-ui-contrast-15)),
   ),
   "color.ui.contrast.20": (
-    default: (#b7c0c1),
-    "light": (#b7c0c1),
-    "dark": (#1c2324),
+    default: (var(--color-ui-contrast-20)),
+    "light": (var(--color-ui-contrast-20)),
+    "dark": (var(--color-ui-contrast-20)),
   ),
   "color.ui.contrast.30": (
-    default: (#98a0a2),
-    "light": (#98a0a2),
-    "dark": (#353c3d),
+    default: (var(--color-ui-contrast-30)),
+    "light": (var(--color-ui-contrast-30)),
+    "dark": (var(--color-ui-contrast-30)),
   ),
   "color.ui.contrast.40": (
-    default: (#7a8283),
-    "light": (#7a8283),
-    "dark": (#42494b),
+    default: (var(--color-ui-contrast-40)),
+    "light": (var(--color-ui-contrast-40)),
+    "dark": (var(--color-ui-contrast-40)),
   ),
   "color.ui.contrast.50": (
-    default: (#5d6566),
-    "light": (#5d6566),
-    "dark": (#5d6566),
+    default: (var(--color-ui-contrast-50)),
+    "light": (var(--color-ui-contrast-50)),
+    "dark": (var(--color-ui-contrast-50)),
   ),
   "color.ui.contrast.60": (
-    default: (#42494b),
-    "light": (#42494b),
-    "dark": (#7a8283),
+    default: (var(--color-ui-contrast-60)),
+    "light": (var(--color-ui-contrast-60)),
+    "dark": (var(--color-ui-contrast-60)),
   ),
   "color.ui.contrast.70": (
-    default: (#282f31),
-    "light": (#282f31),
-    "dark": (#98a0a2),
+    default: (var(--color-ui-contrast-70)),
+    "light": (var(--color-ui-contrast-70)),
+    "dark": (var(--color-ui-contrast-70)),
   ),
   "color.ui.contrast.80": (
-    default: (#1c2324),
-    "light": (#1c2324),
-    "dark": (#b7c0c1),
+    default: (var(--color-ui-contrast-80)),
+    "light": (var(--color-ui-contrast-80)),
+    "dark": (var(--color-ui-contrast-80)),
   ),
   "color.ui.contrast.85": (
-    default: (#111719),
-    "light": (#111719),
-    "dark": (#c8cfd0),
+    default: (var(--color-ui-contrast-85)),
+    "light": (var(--color-ui-contrast-85)),
+    "dark": (var(--color-ui-contrast-85)),
   ),
   "color.ui.contrast.90": (
-    default: (#070c0d),
-    "light": (#070c0d),
-    "dark": (#dadfe0),
+    default: (var(--color-ui-contrast-90)),
+    "light": (var(--color-ui-contrast-90)),
+    "dark": (var(--color-ui-contrast-90)),
   ),
   "color.ui.contrast.95": (
-    default: (#010405),
-    "light": (#010405),
-    "dark": (#eeefef),
+    default: (var(--color-ui-contrast-95)),
+    "light": (var(--color-ui-contrast-95)),
+    "dark": (var(--color-ui-contrast-95)),
   ),
   "color.ui.contrast.00": (
-    default: (#ffffff),
-    "light": (#ffffff),
-    "dark": (#010405),
+    default: (var(--color-ui-contrast-00)),
+    "light": (var(--color-ui-contrast-00)),
+    "dark": (var(--color-ui-contrast-00)),
   ),
   "color.ui.contrast.05": (
-    default: (#eeefef),
-    "light": (#eeefef),
-    "dark": (#070c0d),
+    default: (var(--color-ui-contrast-05)),
+    "light": (var(--color-ui-contrast-05)),
+    "dark": (var(--color-ui-contrast-05)),
   ),
   "color.ui.error.10": (
-    default: (#000408),
+    default: (var(--color-ui-error-10)),
   ),
   "color.ui.error.15": (
-    default: (#0e0b0e),
+    default: (var(--color-ui-error-15)),
   ),
   "color.ui.error.20": (
-    default: (#231414),
+    default: (var(--color-ui-error-20)),
   ),
   "color.ui.error.25": (
-    default: (#391c19),
+    default: (var(--color-ui-error-25)),
   ),
   "color.ui.error.30": (
-    default: (#50241e),
+    default: (var(--color-ui-error-30)),
   ),
   "color.ui.error.40": (
-    default: (#823326),
+    default: (var(--color-ui-error-40)),
   ),
   "color.ui.error.50": (
-    default: (#b8422d),
+    default: (var(--color-ui-error-50)),
   ),
   "color.ui.error.60": (
-    default: (#f05132),
+    default: (var(--color-ui-error-60)),
   ),
   "color.ui.error.70": (
-    default: (#ff7f64),
+    default: (var(--color-ui-error-70)),
   ),
   "color.ui.error.80": (
-    default: (#ffae9c),
+    default: (var(--color-ui-error-80)),
   ),
   "color.ui.error.85": (
-    default: (#ffc4b6),
+    default: (var(--color-ui-error-85)),
   ),
   "color.ui.error.90": (
-    default: (#ffd8cf),
+    default: (var(--color-ui-error-90)),
   ),
   "color.ui.error.95": (
-    default: (#ffece7),
+    default: (var(--color-ui-error-95)),
   ),
   "color.ui.error.100": (
-    default: (#ffffff),
+    default: (var(--color-ui-error-100)),
   ),
   "color.ui.fg": (
-    default: (#070c0d),
+    default: (var(--color-ui-fg)),
   ),
   "ease.circ-in": (
-    default: (cubic-bezier(0.55, 0, 1, 0.45)),
+    default: (var(--ease-circ-in)),
   ),
   "ease.circ-out": (
-    default: (cubic-bezier(0.33, 1, 0.68, 1)),
+    default: (var(--ease-circ-out)),
   ),
   "ease.circ-in-out": (
-    default: (cubic-bezier(0.85, 0, 0.15, 1)),
+    default: (var(--ease-circ-in-out)),
   ),
   "ease.cubic-in": (
-    default: (cubic-bezier(0.32, 0, 0.67, 0)),
+    default: (var(--ease-cubic-in)),
   ),
   "ease.cubic-in-out": (
-    default: (cubic-bezier(0.65, 0, 0.35, 1)),
+    default: (var(--ease-cubic-in-out)),
   ),
   "ease.cubic-out": (
-    default: (cubic-bezier(0.33, 1, 0.68, 1)),
+    default: (var(--ease-cubic-out)),
   ),
   "ease.linear": (
-    default: (cubic-bezier(0, 0, 1, 1)),
+    default: (var(--ease-linear)),
   ),
   "timing.quick": (
-    default: (100ms),
+    default: (var(--timing-quick)),
   ),
   "timing.deliberate": (
-    default: (200ms),
+    default: (var(--timing-deliberate)),
   ),
   "timing.slow": (
-    default: (1000ms),
+    default: (var(--timing-slow)),
   ),
   "typography.family.base": (
-    default: (PPNeueMontreal, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif),
+    default: (var(--typography-family-base)),
   ),
   "typography.family.mono": (
-    default: (ui-monospace, monospace),
+    default: (var(--typography-family-mono)),
   ),
   "typography.base": (
     "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.base\")` instead.",
@@ -255,81 +345,117 @@ $__token-values: (
   "typography.mono": (
     "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.mono\")` instead.",
   ),
+  "typography.h1": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h1\")` instead.",
+  ),
+  "typography.h2": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h2\")` instead.",
+  ),
   "layer.base": (
-    default: (10),
+    default: (var(--layer-base)),
   ),
   "layer.float": (
-    default: (20),
+    default: (var(--layer-float)),
   ),
   "layer.popover": (
-    default: (30),
+    default: (var(--layer-popover)),
   ),
   "layer.nav": (
-    default: (40),
+    default: (var(--layer-nav)),
   ),
   "layer.modal": (
-    default: (80),
+    default: (var(--layer-modal)),
   ),
   "layer.alert": (
-    default: (100),
+    default: (var(--layer-alert)),
   ),
   "size.s.height": (
-    default: (1.75rem),
+    default: (var(--size-s-height)),
   ),
   "size.s.padding": (
-    default: (0.5rem),
+    default: (var(--size-s-padding)),
   ),
   "size.s.radius": (
-    default: (0.375rem),
+    default: (var(--size-s-radius)),
   ),
   "size.s.textSize": (
-    default: (0.75rem),
+    default: (var(--size-s-textSize)),
   ),
   "size.m.height": (
-    default: (2rem),
+    default: (var(--size-m-height)),
   ),
   "size.m.padding": (
-    default: (0.75rem),
+    default: (var(--size-m-padding)),
   ),
   "size.m.radius": (
-    default: (0.375rem),
+    default: (var(--size-m-radius)),
   ),
   "size.m.textSize": (
-    default: (1rem),
+    default: (var(--size-m-textSize)),
   ),
   "size.l.height": (
-    default: (2.5rem),
+    default: (var(--size-l-height)),
   ),
   "size.l.padding": (
-    default: (1rem),
+    default: (var(--size-l-padding)),
   ),
   "size.l.radius": (
-    default: (0.75rem),
+    default: (var(--size-l-radius)),
   ),
   "size.l.textSize": (
-    default: (1.25rem),
+    default: (var(--size-l-textSize)),
   ),
 );
 
 $__token-typography-mixins: (
   "typography.base": (
     default: (
-      "font-family": (PPNeueMontreal, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif),
-      "font-size": (0.875rem),
-      "font-stretch": (100%),
-      "font-weight": (400),
-      "line-height": (1.2),
-      "text-transform": (none),
+      "font-family": (var(--typography-base-font-family)),
+      "font-size": (var(--typography-base-font-size)),
+      "font-stretch": (var(--typography-base-font-stretch)),
+      "font-style": (var(--typography-base-font-style)),
+      "font-variation-settings": (var(--typography-base-font-variation-settings)),
+      "font-weight": (var(--typography-base-font-weight)),
+      "letter-spacing": (var(--typography-base-letter-spacing)),
+      "line-height": (var(--typography-base-line-height)),
+      "text-transform": (var(--typography-base-text-transform)),
     ),
   ),
   "typography.mono": (
     default: (
-      "font-family": (ui-monospace, monospace),
-      "font-size": (0.875rem),
-      "font-stretch": (100%),
-      "font-weight": (400),
-      "line-height": (1.5),
-      "text-transform": (none),
+      "font-family": (var(--typography-mono-font-family)),
+      "font-size": (var(--typography-mono-font-size)),
+      "font-stretch": (var(--typography-mono-font-stretch)),
+      "font-style": (var(--typography-mono-font-style)),
+      "font-variation-settings": (var(--typography-mono-font-variation-settings)),
+      "font-weight": (var(--typography-mono-font-weight)),
+      "letter-spacing": (var(--typography-mono-letter-spacing)),
+      "line-height": (var(--typography-mono-line-height)),
+      "text-transform": (var(--typography-mono-text-transform)),
+    ),
+  ),
+  "typography.h1": (
+    default: (
+      "font-family": (var(--typography-h1-font-family)),
+      "font-size": (var(--typography-h1-font-size)),
+      "font-stretch": (var(--typography-h1-font-stretch)),
+      "font-variation-settings": (var(--typography-h1-font-variation-settings)),
+      "font-weight": (var(--typography-h1-font-weight)),
+      "letter-spacing": (var(--typography-h1-letter-spacing)),
+      "line-height": (var(--typography-h1-line-height)),
+      "text-transform": (var(--typography-h1-text-transform)),
+    ),
+  ),
+  "typography.h2": (
+    default: (
+      "font-family": (var(--typography-h2-font-family)),
+      "font-size": (var(--typography-h2-font-size)),
+      "font-stretch": (var(--typography-h2-font-stretch)),
+      "font-variation-settings": (var(--typography-h2-font-variation-settings)),
+      "font-weight": (var(--typography-h2-font-weight)),
+      "letter-spacing": (var(--typography-h2-letter-spacing)),
+      "line-height": (var(--typography-h2-line-height)),
+      "text-transform": (var(--typography-h2-text-transform)),
     ),
   ),
 );

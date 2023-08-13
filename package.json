@@ -1,6 +1,5 @@
 {
-	"name": "@terrazzo/glass",
-	"description": "Svelte UI kit",
+	"name": "@terrazzo/tiles",
 	"author": {
 		"name": "Drew Powers",
 		"email": "drew@pow.rs"
@@ -11,20 +10,24 @@
 		"type": "git",
 		"url": "git+terrazzoapp/glass.git"
 	},
-	"main": "./dist/index.js",
-	"sass": "./dist/index.scss",
+	"sass": "./tokens/index.scss",
+	"exports": {
+		"./dist/*": "./*",
+		"./*": "./*"
+	},
 	"scripts": {
-		"build": "co build && vite build",
-		"dev": "vite dev",
+		"build": "run-p -s prepare:* && co build && cp -r src/* dist && rm -rf dist/lib && tsc",
+		"build:docs": "run-p -s prepare:* && vite build",
+		"dev": "run-p -s prepare:* && vite dev",
 		"format": "prettier --write src",
 		"lint": "run-p -s lint:*",
 		"lint:js": "eslint \"src/**/*.{js,ts,svelte}\"",
 		"lint:prettier": "prettier --check \"src/**/*.{js,ts,svelte}\"",
-		"prepare": "run-p -s prepare:*",
+		"prepare:shiki": "rm -rf docs/static/assets/shiki && cp -r node_modules/shiki docs/static/assets",
 		"prepare:tokens": "co build",
 		"test": "run-p -s test:*",
 		"test:js": "vitest run",
-		"test:ts": "svelte-check --tsconfig ./tsconfig.json"
+		"test:ts": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
 	},
 	"peerDependencies": {
 		"svelte": ">= 3"
@@ -32,6 +35,9 @@
 	"devDependencies": {
 		"@cobalt-ui/cli": "^1.4.0",
 		"@cobalt-ui/plugin-sass": "^1.2.3",
+		"@sveltejs/adapter-cloudflare": "^2.3.2",
+		"@sveltejs/kit": "^1.22.5",
+		"@sveltejs/package": "^2.2.1",
 		"@sveltejs/vite-plugin-svelte": "^2.4.5",
 		"@typescript-eslint/eslint-plugin": "^6.3.0",
 		"@typescript-eslint/parser": "^6.3.0",
@@ -41,9 +47,16 @@
 		"eslint-plugin-svelte": "^2.32.4",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^3.0.1",
+		"prettier-plugin-svelte": "^3.0.3",
+		"sass": "^1.65.1",
 		"svelte": "^4.2.0",
 		"svelte-check": "^3.5.0",
+		"typescript": "^5.1.6",
 		"vite": "^4.4.9",
 		"vitest": "^0.34.1"
+	},
+	"dependencies": {
+		"nanoid": "^4.0.2",
+		"shiki": "^0.14.3"
 	}
 }

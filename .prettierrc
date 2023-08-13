@@ -1,4 +1,13 @@
 {
+	"printWidth": 240,
+	"singleQuote": true,
 	"useTabs": true,
-	"printWidth": 240
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	]
 }

@@ -1,3 +1,8 @@
 .DS_Store
+.env
+.svelte-kit
+*.env
+build
 dist
+docs/static/assets/shiki
 node_modules

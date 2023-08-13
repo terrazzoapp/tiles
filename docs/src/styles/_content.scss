@@ -1,0 +1,55 @@
+@use '../../../tokens' as *;
+
+/// Global content styles
+.content {
+	padding-bottom: 3rem;
+	padding-top: 1.5rem;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 1.5rem;
+		margin-top: 1.5rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	p,
+	blockquote,
+	figure {
+		margin-bottom: 1.5rem;
+		margin-top: 1.5rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		@include typography('typography.base');
+
+		line-height: 1.6;
+		max-width: 40em;
+	}
+
+	h1 {
+		@include typography('typography.h1');
+	}
+
+	h2 {
+		@include typography('typography.h2');
+	}
+}

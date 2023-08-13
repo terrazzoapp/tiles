@@ -1,16 +1,12 @@
-import { defineConfig } from "vite";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { defineConfig } from 'vite';
+import { sveltekit } from '@sveltejs/kit/vite';
 
 export default defineConfig({
-	mode: "production",
-	plugins: [svelte()],
-	build: {
-		outDir: "dist",
-		lib: {
-			name: "@terrazzo/glass",
+	mode: 'production',
+	plugins: [sveltekit()],
+	server: {
+		fs: {
+			allow: ['./docs'],
 		},
-	},
-	rollupOptions: {
-		external: ["svelte", "svelte-check"],
 	},
 });

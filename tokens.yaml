@@ -31,6 +31,37 @@ color:
       $value: oklch(95% 0.001 210)
     100:
       $value: oklch(100% 0 210)
+  black:
+    $value: '{color.gray.10}'
+  blue:
+    10:
+      $value: oklch(10% 0.058147 270)
+    15:
+      $value: oklch(15% 0.068319 265.5)
+    20:
+      $value: oklch(20% 0.078769 262.5)
+    25:
+      $value: oklch(25% 0.089399 260)
+    30:
+      $value: oklch(30% 0.100151 258)
+    40:
+      $value: oklch(40% 0.121892 255.5)
+    50:
+      $value: oklch(50% 0.143831 253.5)
+    60:
+      $value: oklch(60% 0.165889 252)
+    70:
+      $value: oklch(70% 0.145152 252)
+    80:
+      $value: oklch(80% 0.106491 252)
+    85:
+      $value: oklch(85% 0.078301 252)
+    90:
+      $value: oklch(90% 0.051177 252)
+    95:
+      $value: oklch(95% 0.025089 252)
+    100:
+      $value: oklch(100% 0 0)
   red:
     10:
       $value: oklch(10% 0.021349 235.454484)
@@ -60,126 +91,157 @@ color:
       $value: oklch(95.624992% 0.021975 33.000926)
     100:
       $value: oklch(99.999999% 0 0)
+  white:
+    $value: '{color.gray.100}'
   ui:
+    action:
+      10:
+        $value: '{color.blue.10}'
+      15:
+        $value: '{color.blue.15}'
+      20:
+        $value: '{color.blue.20}'
+      25:
+        $value: '{color.blue.25}'
+      30:
+        $value: '{color.blue.30}'
+      40:
+        $value: '{color.blue.40}'
+      50:
+        $value: '{color.blue.50}'
+      60:
+        $value: '{color.blue.60}'
+      70:
+        $value: '{color.blue.70}'
+      80:
+        $value: '{color.blue.80}'
+      85:
+        $value: '{color.blue.85}'
+      90:
+        $value: '{color.blue.90}'
+      95:
+        $value: '{color.blue.95}'
+      100:
+        $value: '{color.blue.100}'
     bg:
-      $value: "{color.ui.contrast.00}"
+      $value: '{color.ui.contrast.00}'
     contrast:
       $description: Gray color that adjusts to color mode. The higher the number, the higher the contrast from the background.
-      "00":
-        $value: "{color.gray.100}"
+      '00':
+        $value: '{color.gray.100}'
         $extensions:
           mode:
-            light: "{color.gray.100}"
-            dark: "{color.gray.10}"
-      "05":
-        $value: "{color.gray.95}"
+            light: '{color.gray.100}'
+            dark: '{color.gray.10}'
+      '05':
+        $value: '{color.gray.95}'
         $extensions:
           mode:
-            light: "{color.gray.95}"
-            dark: "{color.gray.15}"
+            light: '{color.gray.95}'
+            dark: '{color.gray.15}'
       10:
-        $value: "{color.gray.90}"
+        $value: '{color.gray.90}'
         $extensions:
           mode:
-            light: "{color.gray.90}"
-            dark: "{color.gray.20}"
+            light: '{color.gray.90}'
+            dark: '{color.gray.20}'
       15:
-        $value: "{color.gray.85}"
+        $value: '{color.gray.85}'
         $extensions:
           mode:
-            light: "{color.gray.85}"
-            dark: "{color.gray.20}"
+            light: '{color.gray.85}'
+            dark: '{color.gray.20}'
       20:
-        $value: "{color.gray.80}"
+        $value: '{color.gray.80}'
         $extensions:
           mode:
-            light: "{color.gray.80}"
-            dark: "{color.gray.25}"
+            light: '{color.gray.80}'
+            dark: '{color.gray.25}'
       30:
-        $value: "{color.gray.70}"
+        $value: '{color.gray.70}'
         $extensions:
           mode:
-            light: "{color.gray.70}"
-            dark: "{color.gray.35}"
+            light: '{color.gray.70}'
+            dark: '{color.gray.35}'
       40:
-        $value: "{color.gray.60}"
+        $value: '{color.gray.60}'
         $extensions:
           mode:
-            light: "{color.gray.60}"
-            dark: "{color.gray.40}"
+            light: '{color.gray.60}'
+            dark: '{color.gray.40}'
       50:
-        $value: "{color.gray.50}"
+        $value: '{color.gray.50}'
         $extensions:
           mode:
-            light: "{color.gray.50}"
-            dark: "{color.gray.50}"
+            light: '{color.gray.50}'
+            dark: '{color.gray.50}'
       60:
-        $value: "{color.gray.40}"
+        $value: '{color.gray.40}'
         $extensions:
           mode:
-            light: "{color.gray.40}"
-            dark: "{color.gray.60}"
+            light: '{color.gray.40}'
+            dark: '{color.gray.60}'
       70:
-        $value: "{color.gray.30}"
+        $value: '{color.gray.30}'
         $extensions:
           mode:
-            light: "{color.gray.30}"
-            dark: "{color.gray.70}"
+            light: '{color.gray.30}'
+            dark: '{color.gray.70}'
       80:
-        $value: "{color.gray.25}"
+        $value: '{color.gray.25}'
         $extensions:
           mode:
-            light: "{color.gray.25}"
-            dark: "{color.gray.80}"
+            light: '{color.gray.25}'
+            dark: '{color.gray.80}'
       85:
-        $value: "{color.gray.20}"
+        $value: '{color.gray.20}'
         $extensions:
           mode:
-            light: "{color.gray.20}"
-            dark: "{color.gray.85}"
+            light: '{color.gray.20}'
+            dark: '{color.gray.85}'
       90:
-        $value: "{color.gray.15}"
+        $value: '{color.gray.15}'
         $extensions:
           mode:
-            light: "{color.gray.15}"
-            dark: "{color.gray.90}"
+            light: '{color.gray.15}'
+            dark: '{color.gray.90}'
       95:
-        $value: "{color.gray.10}"
+        $value: '{color.gray.10}'
         $extensions:
           mode:
-            light: "{color.gray.10}"
-            dark: "{color.gray.95}"
+            light: '{color.gray.10}'
+            dark: '{color.gray.95}'
     error:
       10:
-        $value: "{color.red.10}"
+        $value: '{color.red.10}'
       15:
-        $value: "{color.red.15}"
+        $value: '{color.red.15}'
       20:
-        $value: "{color.red.20}"
+        $value: '{color.red.20}'
       25:
-        $value: "{color.red.25}"
+        $value: '{color.red.25}'
       30:
-        $value: "{color.red.30}"
+        $value: '{color.red.30}'
       40:
-        $value: "{color.red.40}"
+        $value: '{color.red.40}'
       50:
-        $value: "{color.red.50}"
+        $value: '{color.red.50}'
       60:
-        $value: "{color.red.60}"
+        $value: '{color.red.60}'
       70:
-        $value: "{color.red.70}"
+        $value: '{color.red.70}'
       80:
-        $value: "{color.red.80}"
+        $value: '{color.red.80}'
       85:
-        $value: "{color.red.85}"
+        $value: '{color.red.85}'
       90:
-        $value: "{color.red.90}"
+        $value: '{color.red.90}'
       95:
-        $value: "{color.red.95}"
+        $value: '{color.red.95}'
       100:
-        $value: "{color.red.100}"
+        $value: '{color.red.100}'
     fg:
-      $value: "{color.ui.contrast.90}"
+      $value: '{color.ui.contrast.90}'
 ease:
   $description: Easing curves
   $type: cubicBezier
@@ -211,7 +273,9 @@ typography:
     base:
       $type: fontFamily
       $value:
-        - PPNeueMontreal
+        - a-v
+        - Avenir
+        - Avenir Next
         - system-ui
         - -apple-system
         - Helvetica Neue
@@ -224,19 +288,45 @@ typography:
         - monospace
   base:
     $value:
-      fontFamily: "{typography.family.base}"
-      fontSize: 0.875rem
+      fontFamily: '{typography.family.base}'
+      fontSize: '{size.m.textSize}'
       fontStretch: 100%
+      fontStyle: normal
+      fontVariationSettings: '"wght" 400, "ital" 0'
       fontWeight: 400
+      letterSpacing: 0
       lineHeight: 1.2
       textTransform: none
   mono:
     $value:
-      fontFamily: "{typography.family.mono}"
-      fontSize: 0.875rem
+      fontFamily: '{typography.family.mono}'
+      fontSize: '{size.m.textSize}'
       fontStretch: 100%
+      fontStyle: normal
+      fontVariationSettings: '"wght" 400, "ital" 0'
       fontWeight: 400
+      letterSpacing: 0
       lineHeight: 1.5
+      textTransform: none
+  h1:
+    $value:
+      fontFamily: '{typography.family.base}'
+      fontSize: 2.5rem
+      fontStretch: 100%
+      fontVariationSettings: '"wght" 300, "ital" 0'
+      fontWeight: 400
+      letterSpacing: -0.025em
+      lineHeight: 1.3
+      textTransform: none
+  h2:
+    $value:
+      fontFamily: '{typography.family.base}'
+      fontSize: 1.875rem
+      fontStretch: 100%
+      fontVariationSettings: '"wght" 350, "ital" 0'
+      fontWeight: 400
+      letterSpacing: -0.025em
+      lineHeight: 1.3
       textTransform: none
 layer:
   $description: App layers

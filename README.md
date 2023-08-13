@@ -1,11 +1,11 @@
 # @terrazzo/glass
 
-Installation
+### Installation
 
 ```sh
 npm i @terrazzo/glass
 ```
 
-Docs
+### Docs
 
-https://terrazzo-glass.pages.dev
+[terrazzo-tiles.pages.dev](https://terrazzo-tiles.pages.dev)

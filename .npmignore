@@ -1,0 +1,5 @@
+.eslintrc.cjs
+.prettierrc
+docs
+src
+vite.connfig.ts
