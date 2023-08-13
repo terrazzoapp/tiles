@@ -1,8 +1,10 @@
 .changeset
 .eslintrc.cjs
+.github
 .prettierrc
 .svelte-kit
 docs
 src
 svelte.config.js
 vite.config.ts
+vitest.setup.ts

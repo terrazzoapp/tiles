@@ -11,6 +11,10 @@ module.exports = {
 	plugins: ['@typescript-eslint'],
 	rules: {
 		'@typescript-eslint/no-non-null-assertion': 'off', // better than "any"
+		'@typescript-eslint/no-unused-vars': 'off', // handled by TS
+		curly: 'error',
+		'no-console': 'error',
+		'no-fallthrough': 'error',
 		'no-undef': 'off', // handled by TS
 	},
 	overrides: [
@@ -19,6 +23,13 @@ module.exports = {
 			parser: 'svelte-eslint-parser',
 			parserOptions: {
 				parser: '@typescript-eslint/parser',
+			},
+		},
+		{
+			// relax linting in tests
+			files: ['*.test.*'],
+			rules: {
+				'@typescript-eslint/no-explicit-any': 'off',
 			},
 		},
 	],

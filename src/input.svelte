@@ -7,7 +7,7 @@
 	export let label = '';
 	export let name: string | undefined;
 	export let type: HTMLInputElement['type'] = 'text';
-	export let value: any;
+	export let value: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 
 	// reactivity
 	$: spreadProps = omit($$props, ['id', 'inputmode', 'label', 'name', 'type', 'value']);
