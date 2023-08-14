@@ -1,5 +1,11 @@
 # @terrazzo/tiles
 
+## 0.0.3
+
+### Patch Changes
+
+- [#2](https://github.com/terrazzoapp/tiles/pull/2) [`0a7e761`](https://github.com/terrazzoapp/tiles/commit/0a7e7617b820b25c421bef71c2d6d832fa803729) Thanks [@drwpow](https://github.com/drwpow)! - Allow buttons to be links
+
 ## 0.0.2
 
 ### Patch Changes
