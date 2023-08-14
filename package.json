@@ -13,11 +13,19 @@
 	},
 	"sass": "./tokens/index.scss",
 	"exports": {
-		"./dist/*": "./*",
-		"./*": "./*"
+		"./package.json": "./package.json",
+		"./tokens.yaml": "./tokens.yaml",
+		"./tokens/*": "./tokens/*",
+		"./tsconfig.json": "./tsconfig.json",
+		"./*": {
+			"types": "./dist/*.d.ts",
+			"svelte": "./dist/*",
+			"default": "./dist/*"
+		}
 	},
 	"scripts": {
-		"build": "del dist && mkdir -p dist && run-p -s prepare:* && cp -r src/* dist && del dist/{lib,tests} && tsc -p tsconfig.build.json",
+		"build": "del dist && run-p -s prepare:* && pnpm run build:svelte && del dist/tests",
+		"build:svelte": "svelte-package -i src",
 		"build:docs": "run-s -s prepare:* && vite build",
 		"dev": "run-p -s prepare:* && vite dev",
 		"format": "prettier --write src",
