@@ -1,5 +1,11 @@
 # @terrazzo/tiles
 
+## 0.0.2
+
+### Patch Changes
+
+- [#1](https://github.com/terrazzoapp/tiles/pull/1) [`1edb094`](https://github.com/terrazzoapp/tiles/commit/1edb094f01b17f5b43728ba4fb1b15d7b10fa5a9) Thanks [@drwpow](https://github.com/drwpow)! - Fix Svelte package, export types
+
 ## 0.0.1
 
 ### Patch Changes
