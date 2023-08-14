@@ -8,9 +8,15 @@
 	export let size: 's' | 'm' | 'l' = 'm';
 	/** button type */
 	export let type: 'button' | 'submit' = 'button';
+	/** href (only use if button is a link) */
+	export let href: string | undefined = undefined;
 </script>
 
-<button {...omit($$props, ['color', 'size', 'type', 'variant'])} class="button" {type} data-variant={variant} data-size={size}><slot /></button>
+{#if href}
+	<a {...omit($$props, ['color', 'href', 'size', 'type', 'variant'])} {href} class="button" {type} data-variant={variant} data-size={size}><slot /></a>
+{:else}
+	<button {...omit($$props, ['color', 'size', 'type', 'variant'])} class="button" {type} data-variant={variant} data-size={size}><slot /></button>
+{/if}
 
 <style lang="scss">
 	@use '../tokens' as *;
@@ -43,6 +49,7 @@
 		padding-left: var(--padding);
 		padding-right: var(--padding);
 		padding-top: 0;
+		text-decoration: none;
 		white-space: nowrap;
 
 		// variants
