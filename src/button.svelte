@@ -115,6 +115,10 @@
 			&:hover {
 				--borderColor: #{token('color.ui.contrast.15')};
 			}
+
+			&:active {
+				--background: #{token('color.ui.contrast.15')};
+			}
 		}
 	}
 </style>

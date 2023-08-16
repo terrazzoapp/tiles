@@ -307,6 +307,9 @@ $__token-values: (
   "color.ui.error.100": (
     default: (var(--color-ui-error-100)),
   ),
+  "color.ui.focus": (
+    default: (var(--color-ui-focus)),
+  ),
   "color.ui.fg": (
     default: (var(--color-ui-fg)),
   ),
@@ -369,6 +372,9 @@ $__token-values: (
   ),
   "layer.base": (
     default: (var(--layer-base)),
+  ),
+  "layer.focus": (
+    default: (var(--layer-focus)),
   ),
   "layer.float": (
     default: (var(--layer-float)),

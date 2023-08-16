@@ -14,7 +14,9 @@
 </script>
 
 <div class="input">
-	{#if label}<label class="input-label" for={id}>{label}</label>{/if}
+	<label class="input-label" for={id}
+		>{#if $$slots.label}<slot name="label" />{:else}{label}{/if}</label
+	>
 	<div class="input-wrapper">
 		{#if type === 'text'}
 			<input class="input-input" {...spreadProps} {name} {id} type="text" inputmode="text" bind:value />

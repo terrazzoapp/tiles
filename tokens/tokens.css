@@ -94,6 +94,7 @@
   --color-ui-error-90: var(--color-red-90);
   --color-ui-error-95: var(--color-red-95);
   --color-ui-error-100: var(--color-red-100);
+  --color-ui-focus: var(--color-blue-60);
   --color-ui-fg: var(--color-ui-contrast-90);
   --color-ui-fg-subdue: var(--color-ui-contrast-70);
   --ease-circ-in: cubic-bezier(0.55, 0, 1, 0.45);
@@ -159,10 +160,11 @@
   --typography-label-line-height: 1.3;
   --typography-label-text-transform: none;
   --layer-base: 10;
-  --layer-float: 20;
-  --layer-popover: 30;
-  --layer-nav: 40;
-  --layer-modal: 80;
+  --layer-focus: 20;
+  --layer-float: 30;
+  --layer-popover: 40;
+  --layer-nav: 50;
+  --layer-modal: 90;
   --layer-alert: 100;
   --size-s-height: 1.75rem;
   --size-s-padding: 0.5rem;

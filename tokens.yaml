@@ -252,6 +252,8 @@ color:
         $value: '{color.red.95}'
       100:
         $value: '{color.red.100}'
+    focus:
+      $value: '{color.blue.60}'
     fg:
       $description: The default foreground color. This is by default high contrast with the background.
       $value: '{color.ui.contrast.90}'
@@ -369,14 +371,17 @@ layer:
   $type: number
   base:
     $value: 10
-  float:
+  focus:
+    $description: When focusing, make sure element isn’t obscured by any around it
     $value: 20
-  popover:
+  float:
     $value: 30
-  nav:
+  popover:
     $value: 40
+  nav:
+    $value: 50
   modal:
-    $value: 80
+    $value: 90
   alert:
     $value: 100
 size:
