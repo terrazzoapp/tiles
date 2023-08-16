@@ -67,7 +67,7 @@
 			line-height: var(--height);
 			min-width: 0;
 			padding: 0;
-			text-indent: var(--padding); // padding crops text weird!
+			text-indent: calc(0.5 * var(--padding)); // padding crops text weird!
 			width: 100%;
 
 			&::-webkit-inner-spin-button,

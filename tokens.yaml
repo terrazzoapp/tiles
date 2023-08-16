@@ -2,35 +2,35 @@ color:
   $type: color
   gray:
     10:
-      $value: oklch(10% 0.01 210)
+      $value: oklch(10% 0.01 260)
     15:
-      $value: oklch(15% 0.01 210)
+      $value: oklch(15% 0.008 262)
     20:
-      $value: oklch(20% 0.01 210)
+      $value: oklch(20% 0.006 264)
     25:
-      $value: oklch(25% 0.01 210)
+      $value: oklch(25% 0.04 270)
     30:
-      $value: oklch(30% 0.01 210)
+      $value: oklch(30% 0.002 285)
     35:
-      $value: oklch(35% 0.01 210)
+      $value: oklch(35% 0.002 342)
     40:
-      $value: oklch(40% 0.01 210)
+      $value: oklch(40% 0.002 40)
     50:
-      $value: oklch(50% 0.01 210)
+      $value: oklch(50% 0.006 60)
     60:
-      $value: oklch(60% 0.01 210)
+      $value: oklch(60% 0.01 65)
     70:
-      $value: oklch(70% 0.01 210)
+      $value: oklch(70% 0.008 65)
     80:
-      $value: oklch(80% 0.01 210)
+      $value: oklch(80% 0.007 65)
     85:
-      $value: oklch(85% 0.0075 210)
+      $value: oklch(85% 0.006 65)
     90:
-      $value: oklch(90% 0.005 210)
+      $value: oklch(90% 0.006 65)
     95:
-      $value: oklch(95% 0.001 210)
+      $value: oklch(95% 0.005 65)
     100:
-      $value: oklch(100% 0 210)
+      $value: oklch(100% 0 65)
   black:
     $value: '{color.gray.10}'
   blue:
