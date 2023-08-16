@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { nanoid } from 'nanoID';
+	import { nanoid } from 'nanoid';
 	import { omit } from './lib/props.js';
 
 	export let id = `checkbox-${nanoid(8)}`;
