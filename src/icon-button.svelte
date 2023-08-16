@@ -2,8 +2,6 @@
 	import { omit } from './lib/props.js';
 
 	// props
-	/** button color variant */
-	export let variant: 'default' | 'primary' | 'danger' = 'default';
 	/** button size variant */
 	export let size: 's' | 'm' | 'l' = 'm';
 	/** button type */
@@ -13,27 +11,26 @@
 </script>
 
 {#if href}
-	<a {...omit($$props, ['color', 'href', 'size', 'type', 'variant'])} {href} class="button" {type} data-variant={variant} data-size={size}><slot /></a>
+	<a {...omit($$props, ['color', 'href', 'size', 'type', 'variant'])} {href} class="button" {type} data-size={size}><slot /></a>
 {:else}
-	<button {...omit($$props, ['color', 'size', 'type', 'variant'])} class="button" {type} data-variant={variant} data-size={size}><slot /></button>
+	<button {...omit($$props, ['color', 'size', 'type', 'variant'])} class="button" {type} data-size={size}><slot /></button>
 {/if}
 
 <style lang="scss">
 	@use '../tokens' as *;
 
 	.button {
-		--background: #{token('color.ui.bg')};
 		--height: #{token('size.m.height')};
+		--iconSize: #{token('size.m.textSize')};
 		--padding: #{token('size.m.padding')};
 		--radius: #{token('size.m.radius')};
 		--textColor: #{color('color.ui.fg')};
-		--textSize: #{token('size.m.textSize')};
 		--borderColor: color-mix(in oklab, currentColor, 60% transparent);
 
 		@include typography('typography.base');
 
 		align-items: center;
-		background: var(--background);
+		background: none;
 		border-color: var(--borderColor);
 		border-radius: var(--radius);
 		border-style: solid;
@@ -53,63 +50,36 @@
 		white-space: nowrap;
 
 		:global(svg) {
-			height: 1rem;
-			width: 1rem;
-		}
-
-		// variants
-
-		&[data-variant='default'] {
-			&:hover {
-				--borderColor: color-mix(in oklab, currentColor, 40% transparent);
-			}
-		}
-
-		&[data-variant='primary'] {
-			--background: #{token('color.ui.action.60')};
-			--borderColor: #{token('color.ui.action.60')};
-			--textColor: #{token('color.white')};
-
-			&:active {
-				--background: #{token('color.ui.action.50')};
-			}
-		}
-
-		&[data-variant='danger'] {
-			--background: #{token('color.ui.error.60')};
-			--borderColor: #{token('color.ui.error.60')};
-			--textColor: #{token('color.white')};
-
-			&:active {
-				--background: #{token('color.ui.error.50')};
-			}
+			height: var(--iconSize);
+			width: var(--iconSize);
 		}
 
 		// sizes
 
 		&[data-size='s'] {
 			--height: #{token('size.s.height')};
+			--iconSize: #{token('size.s.textSize')};
 			--padding: #{token('size.s.padding')};
 			--radius: #{token('size.s.radius')};
-			--textSize: #{token('size.s.textSize')};
-
-			font-variation-settings: 'wght' 500;
 		}
 
 		&[data-size='l'] {
 			--height: #{token('size.l.height')};
+			--iconSize: #{token('size.l.textSize')};
 			--padding: #{token('size.l.padding')};
 			--radius: #{token('size.m.radius')};
-			--textSize: #{token('size.l.textSize')};
+		}
 
-			font-variation-settings: 'wght' 375;
+		// states
+		&[aria-selected='true'] {
+			--background: background-color: token('color.ui.contrast.30');
 		}
 
 		&[disabled] {
-			--background: #{token('color.ui.contrast.15')};
 			--borderColor: #{token('color.ui.contrast.15')};
 			--textColor: #{token('color.ui.contrast.40')};
 
+			background: #{token('color.ui.contrast.15')};
 			cursor: default;
 
 			&:hover {
