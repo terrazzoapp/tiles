@@ -80,7 +80,7 @@
 	$: rootStyle = rootStyleMatch?.[1];
 </script>
 
-<div class="wrapper">
+<div class="codeBlock">
 	{#if showCopy}
 		<div class="menu" role="menu">
 			<button class="copy-button" type="button" on:click={handleCopy} aria-label="copy"
@@ -108,7 +108,7 @@
 <style lang="scss">
 	@use '../tokens' as *;
 
-	.wrapper {
+	.codeBlock {
 		@include typography('typography.mono');
 
 		border-radius: token('size.s.radius');

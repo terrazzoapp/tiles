@@ -5,7 +5,7 @@
 	export let code: string;
 </script>
 
-<div class="wrapper">
+<div class="example">
 	<div class="playground"><slot /></div>
 	<CodeBlock lang="svelte" {code} />
 </div>
@@ -13,7 +13,7 @@
 <style lang="scss">
 	@use '../../../tokens' as *;
 
-	.wrapper {
+	.example {
 		display: grid;
 		gap: 1rem;
 		max-width: 100%;

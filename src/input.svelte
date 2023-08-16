@@ -56,13 +56,14 @@
 			-moz-appearance: textfield;
 			-webkit-appearance: textfield;
 			background: none;
-			border: 1px solid color-mix(in oklab, currentColor, 50% transparent);
+			border: 1px solid color-mix(in oklab, currentColor, 75% transparent);
 			border-radius: var(--radius);
 			color: inherit;
 			display: block;
 			font: inherit;
 			height: var(--height);
 			line-height: var(--height);
+			min-width: 0;
 			padding: 0;
 			text-indent: var(--padding); // padding crops text weird!
 			width: 100%;
@@ -77,10 +78,11 @@
 		}
 
 		&-label {
+			@include typography('typography.label');
+
 			color: token('color.ui.contrast.90');
 			display: block;
-			font-size: 1rem;
-			margin-bottom: var(--padding);
+			margin-bottom: calc(0.5 * var(--padding));
 			opacity: 0.75;
 		}
 

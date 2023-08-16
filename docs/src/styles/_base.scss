@@ -34,6 +34,12 @@ a {
 	}
 }
 
+button,
+label,
+menu {
+	user-select: none;
+}
+
 em,
 i {
 	font-style: normal;
