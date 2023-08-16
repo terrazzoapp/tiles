@@ -344,6 +344,16 @@ typography:
       letterSpacing: -0.025em
       lineHeight: 1.3
       textTransform: none
+  h3:
+    $value:
+      fontFamily: '{typography.family.base}'
+      fontSize: 1.375rem
+      fontStretch: 100%
+      fontVariationSettings: '"wght" 300, "ital" 0'
+      fontWeight: 400
+      letterSpacing: -0.025em
+      lineHeight: 1.3
+      textTransform: none
 layer:
   $description: App layers
   $type: number

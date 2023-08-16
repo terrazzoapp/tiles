@@ -361,6 +361,9 @@ $__token-values: (
   "typography.h2": (
     "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h2\")` instead.",
   ),
+  "typography.h3": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h3\")` instead.",
+  ),
   "layer.base": (
     default: (var(--layer-base)),
   ),
@@ -466,6 +469,18 @@ $__token-typography-mixins: (
       "letter-spacing": (var(--typography-h2-letter-spacing)),
       "line-height": (var(--typography-h2-line-height)),
       "text-transform": (var(--typography-h2-text-transform)),
+    ),
+  ),
+  "typography.h3": (
+    default: (
+      "font-family": (var(--typography-h3-font-family)),
+      "font-size": (var(--typography-h3-font-size)),
+      "font-stretch": (var(--typography-h3-font-stretch)),
+      "font-variation-settings": (var(--typography-h3-font-variation-settings)),
+      "font-weight": (var(--typography-h3-font-weight)),
+      "letter-spacing": (var(--typography-h3-letter-spacing)),
+      "line-height": (var(--typography-h3-line-height)),
+      "text-transform": (var(--typography-h3-text-transform)),
     ),
   ),
 );
