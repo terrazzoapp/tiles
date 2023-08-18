@@ -426,6 +426,9 @@ $__token-values: (
   "typography.h3": (
     "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h3\")` instead.",
   ),
+  "typography.footnote": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.footnote\")` instead.",
+  ),
   "typography.label": (
     "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.label\")` instead.",
   ),
@@ -549,6 +552,18 @@ $__token-typography-mixins: (
       "letter-spacing": (var(--typography-h3-letter-spacing)),
       "line-height": (var(--typography-h3-line-height)),
       "text-transform": (var(--typography-h3-text-transform)),
+    ),
+  ),
+  "typography.footnote": (
+    default: (
+      "font-family": (var(--typography-footnote-font-family)),
+      "font-size": (var(--typography-footnote-font-size)),
+      "font-stretch": (var(--typography-footnote-font-stretch)),
+      "font-variation-settings": (var(--typography-footnote-font-variation-settings)),
+      "font-weight": (var(--typography-footnote-font-weight)),
+      "letter-spacing": (var(--typography-footnote-letter-spacing)),
+      "line-height": (var(--typography-footnote-line-height)),
+      "text-transform": (var(--typography-footnote-text-transform)),
     ),
   ),
   "typography.label": (
