@@ -6,10 +6,11 @@
 	export let checked: boolean;
 	export let label = '';
 	export let name: string | undefined;
+	export let value: string | undefined;
 </script>
 
 <div class="checkbox">
-	<input {...omit($$props, ['id', 'label', 'name', 'value', 'group'])} class="input" type="checkbox" {name} {id} bind:checked />
+	<input {...omit($$props, ['id', 'label', 'name', 'value', 'group'])} class="input" type="checkbox" {name} {id} bind:checked {value} />
 	<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><polyline fill="none" points="64,256 192,384 448,128" /></svg>
 	<label class="label" for={id}
 		>{#if $$slots.label}<slot name="label" />{:else}{label}{/if}</label

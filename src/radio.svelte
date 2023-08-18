@@ -112,7 +112,7 @@
 		}
 
 		&:hover::before {
-			border-color: token('color.ui.action.60');
+			border-color: token('color.ui.action.base');
 		}
 	}
 </style>

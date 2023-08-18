@@ -98,6 +98,48 @@ $__token-values: (
   "color.blue.100": (
     default: (var(--color-blue-100)),
   ),
+  "color.green.10": (
+    default: (var(--color-green-10)),
+  ),
+  "color.green.15": (
+    default: (var(--color-green-15)),
+  ),
+  "color.green.20": (
+    default: (var(--color-green-20)),
+  ),
+  "color.green.25": (
+    default: (var(--color-green-25)),
+  ),
+  "color.green.30": (
+    default: (var(--color-green-30)),
+  ),
+  "color.green.40": (
+    default: (var(--color-green-40)),
+  ),
+  "color.green.50": (
+    default: (var(--color-green-50)),
+  ),
+  "color.green.60": (
+    default: (var(--color-green-60)),
+  ),
+  "color.green.70": (
+    default: (var(--color-green-70)),
+  ),
+  "color.green.80": (
+    default: (var(--color-green-80)),
+  ),
+  "color.green.85": (
+    default: (var(--color-green-85)),
+  ),
+  "color.green.90": (
+    default: (var(--color-green-90)),
+  ),
+  "color.green.95": (
+    default: (var(--color-green-95)),
+  ),
+  "color.green.100": (
+    default: (var(--color-green-100)),
+  ),
   "color.red.10": (
     default: (var(--color-red-10)),
   ),
@@ -140,50 +182,49 @@ $__token-values: (
   "color.red.100": (
     default: (var(--color-red-100)),
   ),
+  "color.yellow.70": (
+    default: (var(--color-yellow-70)),
+  ),
+  "color.yellow.75": (
+    default: (var(--color-yellow-75)),
+  ),
+  "color.yellow.80": (
+    default: (var(--color-yellow-80)),
+  ),
+  "color.yellow.85": (
+    default: (var(--color-yellow-85)),
+  ),
+  "color.yellow.90": (
+    default: (var(--color-yellow-90)),
+  ),
+  "color.yellow.92": (
+    default: (var(--color-yellow-92)),
+  ),
+  "color.yellow.95": (
+    default: (var(--color-yellow-95)),
+  ),
   "color.white": (
     default: (var(--color-white)),
   ),
-  "color.ui.action.10": (
-    default: (var(--color-ui-action-10)),
+  "color.ui.action.base": (
+    default: (var(--color-ui-action-base)),
+    "light": (var(--color-ui-action-base)),
+    "dark": (var(--color-ui-action-base)),
   ),
-  "color.ui.action.15": (
-    default: (var(--color-ui-action-15)),
+  "color.ui.action.bg": (
+    default: (var(--color-ui-action-bg)),
+    "light": (var(--color-ui-action-bg)),
+    "dark": (var(--color-ui-action-bg)),
   ),
-  "color.ui.action.20": (
-    default: (var(--color-ui-action-20)),
+  "color.ui.action.border": (
+    default: (var(--color-ui-action-border)),
+    "light": (var(--color-ui-action-border)),
+    "dark": (var(--color-ui-action-border)),
   ),
-  "color.ui.action.25": (
-    default: (var(--color-ui-action-25)),
-  ),
-  "color.ui.action.30": (
-    default: (var(--color-ui-action-30)),
-  ),
-  "color.ui.action.40": (
-    default: (var(--color-ui-action-40)),
-  ),
-  "color.ui.action.50": (
-    default: (var(--color-ui-action-50)),
-  ),
-  "color.ui.action.60": (
-    default: (var(--color-ui-action-60)),
-  ),
-  "color.ui.action.70": (
-    default: (var(--color-ui-action-70)),
-  ),
-  "color.ui.action.80": (
-    default: (var(--color-ui-action-80)),
-  ),
-  "color.ui.action.85": (
-    default: (var(--color-ui-action-85)),
-  ),
-  "color.ui.action.90": (
-    default: (var(--color-ui-action-90)),
-  ),
-  "color.ui.action.95": (
-    default: (var(--color-ui-action-95)),
-  ),
-  "color.ui.action.100": (
-    default: (var(--color-ui-action-100)),
+  "color.ui.action.text": (
+    default: (var(--color-ui-action-text)),
+    "light": (var(--color-ui-action-text)),
+    "dark": (var(--color-ui-action-text)),
   ),
   "color.ui.bg": (
     default: (var(--color-ui-bg)),
@@ -265,47 +306,25 @@ $__token-values: (
     "light": (var(--color-ui-contrast-05)),
     "dark": (var(--color-ui-contrast-05)),
   ),
-  "color.ui.error.10": (
-    default: (var(--color-ui-error-10)),
+  "color.ui.error.base": (
+    default: (var(--color-ui-error-base)),
+    "light": (var(--color-ui-error-base)),
+    "dark": (var(--color-ui-error-base)),
   ),
-  "color.ui.error.15": (
-    default: (var(--color-ui-error-15)),
+  "color.ui.error.bg": (
+    default: (var(--color-ui-error-bg)),
+    "light": (var(--color-ui-error-bg)),
+    "dark": (var(--color-ui-error-bg)),
   ),
-  "color.ui.error.20": (
-    default: (var(--color-ui-error-20)),
+  "color.ui.error.border": (
+    default: (var(--color-ui-error-border)),
+    "light": (var(--color-ui-error-border)),
+    "dark": (var(--color-ui-error-border)),
   ),
-  "color.ui.error.25": (
-    default: (var(--color-ui-error-25)),
-  ),
-  "color.ui.error.30": (
-    default: (var(--color-ui-error-30)),
-  ),
-  "color.ui.error.40": (
-    default: (var(--color-ui-error-40)),
-  ),
-  "color.ui.error.50": (
-    default: (var(--color-ui-error-50)),
-  ),
-  "color.ui.error.60": (
-    default: (var(--color-ui-error-60)),
-  ),
-  "color.ui.error.70": (
-    default: (var(--color-ui-error-70)),
-  ),
-  "color.ui.error.80": (
-    default: (var(--color-ui-error-80)),
-  ),
-  "color.ui.error.85": (
-    default: (var(--color-ui-error-85)),
-  ),
-  "color.ui.error.90": (
-    default: (var(--color-ui-error-90)),
-  ),
-  "color.ui.error.95": (
-    default: (var(--color-ui-error-95)),
-  ),
-  "color.ui.error.100": (
-    default: (var(--color-ui-error-100)),
+  "color.ui.error.text": (
+    default: (var(--color-ui-error-text)),
+    "light": (var(--color-ui-error-text)),
+    "dark": (var(--color-ui-error-text)),
   ),
   "color.ui.focus": (
     default: (var(--color-ui-focus)),
@@ -315,6 +334,46 @@ $__token-values: (
   ),
   "color.ui.fg-subdue": (
     default: (var(--color-ui-fg-subdue)),
+  ),
+  "color.ui.success.base": (
+    default: (var(--color-ui-success-base)),
+    "light": (var(--color-ui-success-base)),
+    "dark": (var(--color-ui-success-base)),
+  ),
+  "color.ui.success.bg": (
+    default: (var(--color-ui-success-bg)),
+    "light": (var(--color-ui-success-bg)),
+    "dark": (var(--color-ui-success-bg)),
+  ),
+  "color.ui.success.border": (
+    default: (var(--color-ui-success-border)),
+    "light": (var(--color-ui-success-border)),
+    "dark": (var(--color-ui-success-border)),
+  ),
+  "color.ui.success.text": (
+    default: (var(--color-ui-success-text)),
+    "light": (var(--color-ui-success-text)),
+    "dark": (var(--color-ui-success-text)),
+  ),
+  "color.ui.warn.base": (
+    default: (var(--color-ui-warn-base)),
+    "light": (var(--color-ui-warn-base)),
+    "dark": (var(--color-ui-warn-base)),
+  ),
+  "color.ui.warn.bg": (
+    default: (var(--color-ui-warn-bg)),
+    "light": (var(--color-ui-warn-bg)),
+    "dark": (var(--color-ui-warn-bg)),
+  ),
+  "color.ui.warn.border": (
+    default: (var(--color-ui-warn-border)),
+    "light": (var(--color-ui-warn-border)),
+    "dark": (var(--color-ui-warn-border)),
+  ),
+  "color.ui.warn.text": (
+    default: (var(--color-ui-warn-text)),
+    "light": (var(--color-ui-warn-text)),
+    "dark": (var(--color-ui-warn-text)),
   ),
   "ease.circ-in": (
     default: (var(--ease-circ-in)),

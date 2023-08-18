@@ -42,8 +42,9 @@
 		cursor: pointer;
 		display: inline-flex;
 		font-size: var(--textSize);
-		gap: var(--padding);
+		gap: calc(0.5 * var(--padding));
 		height: var(--height);
+		justify-content: center;
 		line-height: var(--height);
 		padding-bottom: 0;
 		padding-left: var(--padding);
@@ -66,22 +67,22 @@
 		}
 
 		&[data-variant='primary'] {
-			--background: #{token('color.ui.action.60')};
-			--borderColor: #{token('color.ui.action.60')};
+			--background: #{token('color.ui.action.base')};
+			--borderColor: #{token('color.ui.action.base')};
 			--textColor: #{token('color.white')};
 
 			&:active {
-				--background: #{token('color.ui.action.50')};
+				--background: #{token('color.ui.action.text')};
 			}
 		}
 
 		&[data-variant='danger'] {
-			--background: #{token('color.ui.error.60')};
-			--borderColor: #{token('color.ui.error.60')};
+			--background: #{token('color.ui.error.base')};
+			--borderColor: #{token('color.ui.error.base')};
 			--textColor: #{token('color.white')};
 
 			&:active {
-				--background: #{token('color.ui.error.50')};
+				--background: #{token('color.ui.error.text')};
 			}
 		}
 

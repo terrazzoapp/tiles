@@ -21,12 +21,12 @@ body {
 	outline: 2px solid transparent;
 
 	&:focus-visible {
-		outline-color: token('color.ui.action.60');
+		outline-color: token('color.ui.action.base');
 	}
 }
 
 a {
-	color: token('color.ui.action.60');
+	color: token('color.ui.action.base');
 	text-decoration: none;
 
 	&:hover {

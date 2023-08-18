@@ -37,17 +37,17 @@ color:
     10:
       $value: oklch(10% 0.058147 270)
     15:
-      $value: oklch(15% 0.068319 265.5)
+      $value: oklch(15% 0.068319 266)
     20:
-      $value: oklch(20% 0.078769 262.5)
+      $value: oklch(20% 0.078769 263)
     25:
       $value: oklch(25% 0.089399 260)
     30:
       $value: oklch(30% 0.100151 258)
     40:
-      $value: oklch(40% 0.121892 255.5)
+      $value: oklch(40% 0.121892 256)
     50:
-      $value: oklch(50% 0.143831 253.5)
+      $value: oklch(50% 0.143831 254)
     60:
       $value: oklch(60% 0.165889 252)
     70:
@@ -62,67 +62,107 @@ color:
       $value: oklch(95% 0.025089 252)
     100:
       $value: oklch(100% 0 0)
+  green:
+    10:
+      $value: oklch(10% 0.07 270)
+    15:
+      $value: oklch(15% 0.06 259)
+    20:
+      $value: oklch(20% 0.05 245)
+    25:
+      $value: oklch(25% 0.05 226)
+    30:
+      $value: oklch(30% 0.05 209)
+    40:
+      $value: oklch(40% 0.07 186)
+    50:
+      $value: oklch(50% 0.1 173)
+    60:
+      $value: oklch(60% 0.13 165)
+    70:
+      $value: oklch(70% 0.1 165)
+    80:
+      $value: oklch(80% 0.09 165)
+    85:
+      $value: oklch(85% 0.09 165)
+    90:
+      $value: oklch(90% 0.08 165)
+    95:
+      $value: oklch(95% 0.07 165)
+    100:
+      $value: oklch(100% 0 0)
   red:
     10:
-      $value: oklch(10% 0.021349 235.454484)
+      $value: oklch(10% 0.02 235)
     15:
-      $value: oklch(15.499998% 0.007677 320.079087)
+      $value: oklch(15% 0.007 320)
     20:
-      $value: oklch(20.999996% 0.025102 17.938732)
+      $value: oklch(20% 0.025 18)
     25:
-      $value: oklch(26.499994% 0.046575 25.961649)
+      $value: oklch(25% 0.046 26)
     30:
-      $value: oklch(31.999992% 0.068384 28.898286)
+      $value: oklch(30% 0.068 29)
     40:
-      $value: oklch(42.999989% 0.112226 31.335438)
+      $value: oklch(40% 0.112 31)
     50:
-      $value: oklch(53.999985% 0.156157 32.402457)
+      $value: oklch(50% 0.156 32)
     60:
-      $value: oklch(64.999981% 0.200118 33.000816)
+      $value: oklch(60% 0.2 33)
     70:
-      $value: oklch(73.749924% 0.161864 33.00085)
+      $value: oklch(70% 0.16 33)
     80:
-      $value: oklch(82.4999% 0.098816 33.000949)
+      $value: oklch(80% 0.1 33)
     85:
-      $value: oklch(86.874932% 0.071136 33.000967)
+      $value: oklch(85% 0.07 33)
     90:
-      $value: oklch(91.249969% 0.04561 33.000946)
+      $value: oklch(90% 0.04 33)
     95:
-      $value: oklch(95.624992% 0.021975 33.000926)
+      $value: oklch(95% 0.021 33)
     100:
-      $value: oklch(99.999999% 0 0)
+      $value: oklch(100% 0 0)
+  yellow:
+    70:
+      $value: oklch(70% 0.14 75)
+    75:
+      $value: oklch(75% 0.14 77)
+    80:
+      $value: oklch(80% 0.13 81)
+    85:
+      $value: oklch(85% 0.13 84)
+    90:
+      $value: oklch(90% 0.11 87)
+    92:
+      $value: oklch(92% 0.09 87)
+    95:
+      $value: oklch(95% 0.05 85)
   white:
     $value: '{color.gray.100}'
   ui:
     action:
-      10:
-        $value: '{color.blue.10}'
-      15:
-        $value: '{color.blue.15}'
-      20:
-        $value: '{color.blue.20}'
-      25:
-        $value: '{color.blue.25}'
-      30:
-        $value: '{color.blue.30}'
-      40:
-        $value: '{color.blue.40}'
-      50:
-        $value: '{color.blue.50}'
-      60:
+      base:
         $value: '{color.blue.60}'
-      70:
-        $value: '{color.blue.70}'
-      80:
-        $value: '{color.blue.80}'
-      85:
-        $value: '{color.blue.85}'
-      90:
-        $value: '{color.blue.90}'
-      95:
+        $extensions:
+          mode:
+            light: '{color.blue.60}'
+            dark: '{color.blue.60}'
+      bg:
         $value: '{color.blue.95}'
-      100:
-        $value: '{color.blue.100}'
+        $extensions:
+          mode:
+            light: '{color.blue.95}'
+            dark: '{color.blue.10}'
+      border:
+        $value: '{color.blue.80}'
+        $extensions:
+          mode:
+            light: '{color.blue.80}'
+            dark: '{color.blue.20}'
+      text:
+        $value: '{color.blue.50}'
+        $extensions:
+          mode:
+            light: '{color.blue.50}'
+            dark: '{color.blue.60}'
     bg:
       $description: The default background color. In light mode, this is a very light gray. In dark mode, this is black.
       $value: '{color.ui.contrast.05}'
@@ -224,34 +264,30 @@ color:
             light: '{color.gray.10}'
             dark: '{color.gray.95}'
     error:
-      10:
-        $value: '{color.red.10}'
-      15:
-        $value: '{color.red.15}'
-      20:
-        $value: '{color.red.20}'
-      25:
-        $value: '{color.red.25}'
-      30:
-        $value: '{color.red.30}'
-      40:
-        $value: '{color.red.40}'
-      50:
-        $value: '{color.red.50}'
-      60:
+      base:
         $value: '{color.red.60}'
-      70:
-        $value: '{color.red.70}'
-      80:
-        $value: '{color.red.80}'
-      85:
-        $value: '{color.red.85}'
-      90:
-        $value: '{color.red.90}'
-      95:
+        $extensions:
+          mode:
+            light: '{color.red.60}'
+            dark: '{color.red.60}'
+      bg:
         $value: '{color.red.95}'
-      100:
-        $value: '{color.red.100}'
+        $extensions:
+          mode:
+            light: '{color.red.95}'
+            dark: '{color.red.10}'
+      border:
+        $value: '{color.red.80}'
+        $extensions:
+          mode:
+            light: '{color.red.80}'
+            dark: '{color.red.20}'
+      text:
+        $value: '{color.red.95}'
+        $extensions:
+          mode:
+            light: '{color.red.95}'
+            dark: '{color.red.60}'
     focus:
       $value: '{color.blue.60}'
     fg:
@@ -260,6 +296,56 @@ color:
     fg-subdue:
       $description: A slightly less-contrast-y foreground color. Used for text that is less important than default.
       $value: '{color.ui.contrast.70}'
+    success:
+      base:
+        $value: '{color.green.60}'
+        $extensions:
+          mode:
+            light: '{color.green.60}'
+            dark: '{color.green.60}'
+      bg:
+        $value: '{color.green.95}'
+        $extensions:
+          mode:
+            light: '{color.green.95}'
+            dark: '{color.green.10}'
+      border:
+        $value: '{color.green.80}'
+        $extensions:
+          mode:
+            light: '{color.green.80}'
+            dark: '{color.green.20}'
+      text:
+        $value: '{color.green.95}'
+        $extensions:
+          mode:
+            light: '{color.green.95}'
+            dark: '{color.green.60}'
+    warn:
+      base:
+        $value: '{color.yellow.80}'
+        $extensions:
+          mode:
+            light: '{color.yellow.80}'
+            dark: '{color.yellow.70}'
+      bg:
+        $value: '{color.yellow.95}'
+        $extensions:
+          mode:
+            light: '{color.yellow.95}'
+            dark: '{color.yellow.70}'
+      border:
+        $value: '{color.yellow.70}'
+        $extensions:
+          mode:
+            light: '{color.yellow.70}'
+            dark: '{color.yellow.70}'
+      text:
+        $value: '{color.yellow.80}'
+        $extensions:
+          mode:
+            light: '{color.gray.40}'
+            dark: '{color.gray.80}'
 ease:
   $description: Easing curves
   $type: cubicBezier
