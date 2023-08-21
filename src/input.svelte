@@ -32,6 +32,7 @@
 			<input class="field" {...spreadProps} {name} {id} type="text" bind:value />
 		{/if}
 	</div>
+	<div class="note"><slot name="note" /></div>
 </div>
 
 <style lang="scss">
@@ -92,5 +93,15 @@
 		display: block;
 		margin-bottom: calc(0.5 * var(--padding));
 		opacity: 0.75;
+	}
+
+	.note {
+		@include typography('typography.footnote');
+
+		margin-top: calc(0.5 * var(--padding));
+
+		&:empty {
+			display: none;
+		}
 	}
 </style>

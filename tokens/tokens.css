@@ -408,20 +408,4 @@
     --color-yellow-92: color(display-p3 1 0.8823529411764706 0.6235294117647059);
     --color-yellow-95: color(display-p3 0.996078431372549 0.9294117647058824 0.788235294117647);
   }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-    }
-  }
-
-  [data-color-mode="light"] {
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-    }
-  }
-
-  [data-color-mode="dark"] {
-  }
 }
