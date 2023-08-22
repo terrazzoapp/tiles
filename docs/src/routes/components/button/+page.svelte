@@ -2,9 +2,16 @@
 	import Button from '../../../../../src/button.svelte';
 	import Example from '../../../components/example.svelte';
 
-	const code = `import Button from '@terrazzo/tiles/button.svelte';
+	const code =
+		`<script lang="ts"` +
+		`>
+import Button from '@terrazzo/tiles/button.svelte';
+</script` +
+		`>
 
-<Button>Click me</Button>`;
+<Button` +
+		`>Click me</Button` +
+		`>`;
 
 	const sizes = ['m', 's', 'l'] as const;
 	const variants = ['default', 'primary', 'danger'] as const;

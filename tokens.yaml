@@ -377,12 +377,12 @@ typography:
     base:
       $type: fontFamily
       $value:
-        - a-v
-        - Avenir
-        - Avenir Next
+        - Bricolage Grotesque
         - system-ui
         - -apple-system
+        - Aptos
         - Helvetica Neue
+        - Helvetica
         - Arial
         - sans-serif
     mono:
@@ -390,13 +390,16 @@ typography:
       $value:
         - ui-monospace
         - monospace
+    heading:
+      $type: fontFamily
+      $value: '{typography.family.base}'
   base:
     $value:
       fontFamily: '{typography.family.base}'
       fontSize: '{size.m.textSize}'
       fontStretch: 100%
       fontStyle: normal
-      fontVariationSettings: '"wght" 400, "ital" 0'
+      fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: 0
       lineHeight: 1.2
@@ -407,37 +410,37 @@ typography:
       fontSize: '{size.m.textSize}'
       fontStretch: 100%
       fontStyle: normal
-      fontVariationSettings: '"wght" 400, "ital" 0'
+      fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: 0
       lineHeight: 1.5
       textTransform: none
   h1:
     $value:
-      fontFamily: '{typography.family.base}'
+      fontFamily: '{typography.family.heading}'
       fontSize: 2.5rem
       fontStretch: 100%
-      fontVariationSettings: '"wght" 300, "ital" 0'
+      fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: -0.025em
       lineHeight: 1.3
       textTransform: none
   h2:
     $value:
-      fontFamily: '{typography.family.base}'
+      fontFamily: '{typography.family.heading}'
       fontSize: 1.875rem
       fontStretch: 100%
-      fontVariationSettings: '"wght" 350, "ital" 0'
+      fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: -0.025em
       lineHeight: 1.3
       textTransform: none
   h3:
     $value:
-      fontFamily: '{typography.family.base}'
+      fontFamily: '{typography.family.heading}'
       fontSize: 1.375rem
       fontStretch: 100%
-      fontVariationSettings: '"wght" 300, "ital" 0'
+      fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: -0.025em
       lineHeight: 1.3
@@ -447,7 +450,7 @@ typography:
       fontFamily: '{typography.family.base}'
       fontSize: 0.75rem
       fontStretch: 100%
-      fontVariationSettings: '"wght" 450, "ital" 0'
+      fontVariationSettings: '"wght" 400, "ital" 0, "opsz" 12'
       fontWeight: 400
       letterSpacing: 0
       lineHeight: 1.2
@@ -457,7 +460,7 @@ typography:
       fontFamily: '{typography.family.base}'
       fontSize: 0.875rem
       fontStretch: 100%
-      fontVariationSettings: '"wght" 450, "ital" 0'
+      fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: 0
       lineHeight: 1.3
@@ -483,6 +486,8 @@ layer:
 size:
   $type: dimension
   s:
+    gap:
+      $value: 0.25rem
     height:
       $value: 1.75rem
     padding:
@@ -492,6 +497,8 @@ size:
     textSize:
       $value: 0.75rem
   m:
+    gap:
+      $value: 0.5rem
     height:
       $value: 2rem
     padding:
@@ -501,6 +508,8 @@ size:
     textSize:
       $value: 1rem
   l:
+    gap:
+      $value: 0.5rem
     height:
       $value: 2.5rem
     padding:
@@ -508,4 +517,4 @@ size:
     radius:
       $value: 0.5rem
     textSize:
-      $value: 1.25rem
+      $value: 1rem

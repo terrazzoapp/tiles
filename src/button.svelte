@@ -23,6 +23,7 @@
 
 	.button {
 		--background: #{token('color.ui.bg')};
+		--gap: #{token('size.l.gap')};
 		--height: #{token('size.m.height')};
 		--padding: #{token('size.m.padding')};
 		--radius: #{token('size.m.radius')};
@@ -42,7 +43,10 @@
 		cursor: pointer;
 		display: inline-flex;
 		font-size: var(--textSize);
-		gap: calc(0.5 * var(--padding));
+		font-variation-settings:
+			'wdth' 50,
+			'opsz' 12;
+		gap: var(--gap);
 		height: var(--height);
 		justify-content: center;
 		line-height: var(--height);
@@ -89,6 +93,7 @@
 		// sizes
 
 		&[data-size='s'] {
+			--gap: #{token('size.l.gap')};
 			--height: #{token('size.s.height')};
 			--padding: #{token('size.s.padding')};
 			--radius: #{token('size.s.radius')};
@@ -98,6 +103,7 @@
 		}
 
 		&[data-size='l'] {
+			--gap: #{token('size.l.gap')};
 			--height: #{token('size.l.height')};
 			--padding: #{token('size.l.padding')};
 			--radius: #{token('size.m.radius')};

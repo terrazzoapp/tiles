@@ -2,9 +2,15 @@
 	import Input from '../../../../../src/input.svelte';
 	import Example from '../../../components/example.svelte';
 
-	const code = `import Input from '@terrazzo/tiles/input.svelte';
+	const code =
+		`<script lang="ts"` +
+		`>
+import Input from '@terrazzo/tiles/input.svelte';
+</script` +
+		`>
 
-<Input name="name" label="Name" type="text" />`;
+<Input name="name" label="Name" type="text" /` +
+		`>`;
 </script>
 
 <div class="content">

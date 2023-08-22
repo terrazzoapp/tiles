@@ -1,4 +1,5 @@
 <script lang="ts" context="module">
+	import { page } from '$app/stores';
 	import '../styles/app.scss'; // global styles
 </script>
 
@@ -16,9 +17,12 @@
 				<li>
 					<h3>Components</h3>
 					<ul>
-						<li><a href="/components/button">Button</a></li>
-						<li><a href="/components/code-block">CodeBlock</a></li>
-						<li><a href="/components/input">Input</a></li>
+						<li><a href="/components/button" aria-current={$page.url.pathname === '/components/button' ? 'page' : undefined}>Button</a></li>
+						<li><a href="/components/checkbox" aria-current={$page.url.pathname === '/components/checkbox' ? 'page' : undefined}>Checkbox</a></li>
+						<li><a href="/components/code-block" aria-current={$page.url.pathname === '/components/code-block' ? 'page' : undefined}>CodeBlock</a></li>
+						<li><a href="/components/color-picker" aria-current={$page.url.pathname === '/components/code-picker' ? 'page' : undefined}>ColorPicker</a></li>
+						<li><a href="/components/input" aria-current={$page.url.pathname === '/components/input' ? 'page' : undefined}>Input</a></li>
+						<li><a href="/components/radio" aria-current={$page.url.pathname === '/components/radio' ? 'page' : undefined}>Radio</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -75,6 +79,17 @@
 
 			ul {
 				margin: 0.25rem 0 1rem;
+			}
+		}
+
+		a {
+			align-items: center;
+			display: flex;
+			height: 1.5rem;
+
+			&[aria-current='page'] {
+				color: inherit;
+				text-decoration: none;
 			}
 		}
 	}

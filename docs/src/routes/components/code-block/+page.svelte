@@ -2,9 +2,15 @@
 	import CodeBlock from '../../../../../src/code-block.svelte';
 	import Example from '../../../components/example.svelte';
 
-	const code = `import CodeBlock from '@terrazzo/tiles/code-block.svelte';
+	const code =
+		`<script lang="ts"` +
+		`>
+import CodeBlock from '@terrazzo/tiles/code-block.svelte';
+</script` +
+		`>
 
-<CodeBlock lang="shell" code="npm install @terrazzoapp/tiles" />`;
+<CodeBlock lang="shell" code="npm install @terrazzoapp/tiles" /` +
+		`>`;
 </script>
 
 <svelte:head>

@@ -411,6 +411,9 @@ $__token-values: (
   "typography.family.mono": (
     default: (var(--typography-family-mono)),
   ),
+  "typography.family.heading": (
+    default: (var(--typography-family-heading)),
+  ),
   "typography.base": (
     "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.base\")` instead.",
   ),
@@ -453,6 +456,9 @@ $__token-values: (
   "layer.alert": (
     default: (var(--layer-alert)),
   ),
+  "size.s.gap": (
+    default: (var(--size-s-gap)),
+  ),
   "size.s.height": (
     default: (var(--size-s-height)),
   ),
@@ -465,6 +471,9 @@ $__token-values: (
   "size.s.textSize": (
     default: (var(--size-s-textSize)),
   ),
+  "size.m.gap": (
+    default: (var(--size-m-gap)),
+  ),
   "size.m.height": (
     default: (var(--size-m-height)),
   ),
@@ -476,6 +485,9 @@ $__token-values: (
   ),
   "size.m.textSize": (
     default: (var(--size-m-textSize)),
+  ),
+  "size.l.gap": (
+    default: (var(--size-l-gap)),
   ),
   "size.l.height": (
     default: (var(--size-l-height)),

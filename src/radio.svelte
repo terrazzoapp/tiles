@@ -23,12 +23,17 @@
 	.radio {
 		@include typography('typography.base');
 
-		--radio-width: 1em;
+		--textSize: #{token('size.m.textSize')};
+		--height: #{token('size.m.height')};
+		--padding: #{token('size.m.padding')};
+		--radio-width: calc(0.5 * #{token('size.m.height')});
 
 		display: inline-flex;
 		flex-direction: column;
-		font-size: var(--pocky-typography-button-font-size);
-		line-height: var(--pocky-typography-button-line-height);
+		font-size: var(--textSize);
+		height: var(--height);
+		justify-content: center;
+		line-height: var(--height);
 		position: relative;
 		user-select: none;
 	}
@@ -42,8 +47,8 @@
 		margin: 0;
 		opacity: 0;
 		position: absolute;
-		top: token('size.m.padding');
-		transform: translate(1px, 1px);
+		top: 50%;
+		transform: translate3d(0, -50%, 0);
 		width: var(--radio-width);
 
 		&:checked {
@@ -52,7 +57,7 @@
 
 				&::after {
 					opacity: 1;
-					transform: translate3d(40.625%, 40.625%, 0) scale(1);
+					transform: translate3d(50%, -50%, 0) scale(1);
 				}
 			}
 		}
@@ -73,10 +78,11 @@
 	.label {
 		@include typography('typography.label');
 
+		align-items: center;
 		cursor: pointer;
-		display: block;
+		display: flex;
 		opacity: 0.875;
-		padding-left: calc(var(--radio-width) + #{token('size.m.padding')});
+		padding-left: calc(var(--radio-width) + var(--padding));
 		position: relative;
 
 		&:empty {
@@ -84,7 +90,7 @@
 		}
 
 		&::before {
-			border: var(--pocky-border-std);
+			border: 1px solid token('color.ui.contrast.60');
 			border-radius: 10rem;
 			content: '';
 			display: block;
@@ -92,7 +98,8 @@
 			left: 0;
 			outline: 4px solid rgba(0, 0, 0, 0);
 			position: absolute;
-			top: 0;
+			top: 50%;
+			transform: translate3d(0, -50%, 0);
 			width: var(--radio-width);
 			z-index: 1;
 		}
@@ -101,14 +108,14 @@
 			background: token('color.ui.contrast.90');
 			border-radius: 50%;
 			content: '';
-			height: 0.625em;
+			height: calc(0.5 * var(--radio-width));
 			left: 0;
 			opacity: 0;
 			pointer-events: none;
 			position: absolute;
-			top: 0;
-			transform: translate3d(40.625%, 40.625%, 0) scale(0.5);
-			width: 0.625em;
+			top: 50%;
+			transform: translate3d(50%, -50%, 0) scale(0.5);
+			width: calc(0.5 * var(--radio-width));
 		}
 
 		&:hover::before {
