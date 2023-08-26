@@ -79,6 +79,7 @@
 
 	/** handle pointer events for picker */
 	function handleLCSquarePointerDown(evt: PointerEvent) {
+		recalcPos();
 		isDraggingLC = true;
 		handleLCUpdate({ x: (evt.clientX - lcSquareRect.left) / lcSquareRect.width, y: (evt.clientY - lcSquareRect.top) / lcSquareRect.height });
 	}
@@ -86,6 +87,7 @@
 		updateColor({ l: 1 - Math.min(Math.max(y, 0), 1), c: Math.min(Math.max(x, 0), 1) * maxChroma });
 	}
 	function handleHuePointerDown(evt: PointerEvent) {
+		recalcPos();
 		isDraggingH = true;
 		handleHueUpdate((evt.clientY - hueGradientRect.top) / hueGradientRect.height);
 	}
@@ -127,43 +129,13 @@
 		recalcPos();
 
 		// handle pointer move & up events globally because a user can drag outside picker bounds, and release the mouse anywhere on page
-		document.body.addEventListener('pointermove', handlePointerMove);
-		document.body.addEventListener('pointerup', handlePointerUp);
-
-		// listen for scroll events
-		let scrollFrame: number | undefined = undefined;
-		function handleScroll() {
-			if (scrollFrame) {
-				cancelAnimationFrame(scrollFrame);
-			}
-			scrollFrame = requestAnimationFrame(() => {
-				recalcPos();
-				scrollFrame = undefined;
-			});
-		}
-		window.addEventListener('scroll', handleScroll);
-
-		// listen for resize events
-		let resizeFrame: number | undefined = undefined;
-		function handleResize() {
-			if (resizeFrame) {
-				cancelAnimationFrame(resizeFrame);
-			}
-			resizeFrame = requestAnimationFrame(() => {
-				recalcPos();
-				lcManager?.render();
-				hManager?.render();
-				resizeFrame = undefined;
-			});
-		}
-		window.addEventListener('resize', handleResize);
+		addEventListener('pointermove', handlePointerMove);
+		addEventListener('pointerup', handlePointerUp);
 
 		// tear down all listeners
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
-			window.removeEventListener('resize', handleResize);
-			document.body.removeEventListener('pointermove', handlePointerMove);
-			document.body.removeEventListener('pointerup', handlePointerUp);
+			removeEventListener('pointermove', handlePointerMove);
+			removeEventListener('pointerup', handlePointerUp);
 		};
 	});
 </script>

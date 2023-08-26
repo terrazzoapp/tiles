@@ -20,9 +20,10 @@
 						<li><a href="/components/button" aria-current={$page.url.pathname === '/components/button' ? 'page' : undefined}>Button</a></li>
 						<li><a href="/components/checkbox" aria-current={$page.url.pathname === '/components/checkbox' ? 'page' : undefined}>Checkbox</a></li>
 						<li><a href="/components/code-block" aria-current={$page.url.pathname === '/components/code-block' ? 'page' : undefined}>CodeBlock</a></li>
-						<li><a href="/components/color-picker" aria-current={$page.url.pathname === '/components/code-picker' ? 'page' : undefined}>ColorPicker</a></li>
+						<li><a href="/components/color-picker" aria-current={$page.url.pathname === '/components/color-picker' ? 'page' : undefined}>ColorPicker</a></li>
 						<li><a href="/components/input" aria-current={$page.url.pathname === '/components/input' ? 'page' : undefined}>Input</a></li>
 						<li><a href="/components/radio" aria-current={$page.url.pathname === '/components/radio' ? 'page' : undefined}>Radio</a></li>
+						<li><a href="/components/slider" aria-current={$page.url.pathname === '/components/slider' ? 'page' : undefined}>Slider</a></li>
 					</ul>
 				</li>
 			</ul>
