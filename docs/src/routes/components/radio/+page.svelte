@@ -1,5 +1,4 @@
 <script lang="ts">
-	import FormRow from '../../../../../src/form-row.svelte';
 	import Radio from '../../../../../src/radio.svelte';
 	import Example from '../../../components/example.svelte';
 
@@ -34,15 +33,15 @@ let selection = '';
 	<h2>Example</h2>
 
 	<Example {code}>
-		<FormRow>
+		<div>
 			<Radio label="Bulbasaur" name="starter" bind:value={selection} />
-		</FormRow>
-		<FormRow>
+		</div>
+		<div>
 			<Radio label="Squirtle" name="starter" bind:value={selection} />
-		</FormRow>
-		<FormRow>
+		</div>
+		<div>
 			<Radio label="Charmander" name="starter" bind:value={selection} />
-		</FormRow>
+		</div>
 	</Example>
 </div>
 

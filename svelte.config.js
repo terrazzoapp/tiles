@@ -18,6 +18,9 @@ const config = {
 			routes: 'docs/src/routes',
 		},
 	},
+	vitePreprocess: {
+		scss: {},
+	},
 };
 
 export default config;

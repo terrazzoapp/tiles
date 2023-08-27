@@ -456,6 +456,9 @@ $__token-values: (
   "layer.alert": (
     default: (var(--layer-alert)),
   ),
+  "shadow.base": (
+    default: (var(--shadow-base)),
+  ),
   "size.s.gap": (
     default: (var(--size-s-gap)),
   ),

@@ -483,6 +483,15 @@ layer:
     $value: 90
   alert:
     $value: 100
+shadow:
+  $type: shadow
+  base:
+    $value:
+      offsetX: 0
+      offsetY: 0.125rem
+      blur: 0
+      spread: 0
+      color: rgba(0, 0, 0, 0.1)
 size:
   $type: dimension
   s:
@@ -495,7 +504,7 @@ size:
     radius:
       $value: 0.25rem
     textSize:
-      $value: 0.75rem
+      $value: 0.875rem
   m:
     gap:
       $value: 0.5rem

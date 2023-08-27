@@ -1,5 +1,4 @@
 <script lang="ts">
-	import FormRow from '../../../../../src/form-row.svelte';
 	import Slider from '../../../../../src/slider.svelte';
 	import Example from '../../../components/example.svelte';
 
@@ -27,7 +26,7 @@ let max = 11;
 <div class="content">
 	<h1>Slider</h1>
 
-	<p>Slides</p>
+	<p>An “analog” control for visually representing a numeric value with defined <code>min</code> and <code>max</code> range. Sliders should always be accompanied by a traditional input for easier manipulation and better accessibility.</p>
 
 	<h2>Example</h2>
 

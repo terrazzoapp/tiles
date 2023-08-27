@@ -1,0 +1,39 @@
+////
+/// Styling mixins & functions
+////
+@use 'sass:math';
+
+/// Color Mode: dark
+@mixin darkMode {
+	@media (prefers-color-scheme: dark) {
+		:global(body:not([data-color-mode])) & {
+			@content;
+		}
+	}
+
+	:global(body[data-color-mode='dark']) & {
+		@content;
+	}
+}
+
+/// Color Mode: light
+@mixin lightMode {
+	@media (prefers-color-scheme: light) {
+		// ignore if a color mode has been set
+		:global(body:not([data-color-mode])) & {
+			@content;
+		}
+	}
+
+	:global(body[data-color-mode='light']) & {
+		@content;
+	}
+}
+
+/// Opacity
+@function opacity($color, $perc) {
+	@if math.unit($perc) != '%' {
+		@error 'opacity() expects a percentage, received "#{$perc}"';
+	}
+	@return color-mix(in oklab, transparent, $perc $color);
+}

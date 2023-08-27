@@ -43,7 +43,7 @@ import Button from '@terrazzo/tiles/button.svelte';
 					<tr>
 						<th scope="row">variant="{variant}"</th>
 						{#each sizes as size}
-							<td><Button {size} {variant} href="#"><span class="button-name">{variant} ({size})</span></Button></td>
+							<td><Button {size} {variant}><span class="button-name">{variant} ({size})</span></Button></td>
 						{/each}
 					</tr>
 				{/each}

@@ -107,6 +107,8 @@
 	.input {
 		@include typography('typography.mono');
 
+		-moz-appearance: textfield;
+		-webkit-appearance: textfield;
 		background: token('color.ui.bg');
 		border: 1px solid color-mix(in oklab, currentColor, 75% transparent);
 		color: token('color.ui.fg');
