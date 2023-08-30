@@ -43,9 +43,7 @@
 		cursor: pointer;
 		display: inline-flex;
 		font-size: var(--textSize);
-		font-variation-settings:
-			'wdth' 50,
-			'opsz' 12;
+		font-variation-settings: 'opsz' 12;
 		gap: var(--gap);
 		height: var(--height);
 		justify-content: center;

@@ -5,7 +5,7 @@
 
 	.formRow {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		padding-bottom: 0.5rem;
 		padding-top: 0.5rem;
 	}

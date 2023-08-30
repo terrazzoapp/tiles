@@ -8,10 +8,10 @@ export default {
 		sass({
 			cssVars: true,
 			pluginCSS: {
-				modeSelectors: {
-					'color#light': ['@media (prefers-color-scheme: light)', '[data-color-mode="light"]'],
-					'color#dark': ['@media (prefers-color-scheme: dark)', '[data-color-mode="dark"]'],
-				},
+				modeSelectors: [
+					{ mode: 'light', selectors: ['@media (prefers-color-scheme: light)', '[data-color-mode="light"]'] },
+					{ mode: 'dark', selectors: ['@media (prefers-color-scheme: dark)', '[data-color-mode="dark"]'] },
+				],
 			},
 		}),
 	],

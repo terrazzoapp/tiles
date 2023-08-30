@@ -397,7 +397,6 @@ typography:
     $value:
       fontFamily: '{typography.family.base}'
       fontSize: '{size.m.textSize}'
-      fontStretch: 100%
       fontStyle: normal
       fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
@@ -408,7 +407,6 @@ typography:
     $value:
       fontFamily: '{typography.family.mono}'
       fontSize: '{size.m.textSize}'
-      fontStretch: 100%
       fontStyle: normal
       fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
@@ -419,7 +417,6 @@ typography:
     $value:
       fontFamily: '{typography.family.heading}'
       fontSize: 2.5rem
-      fontStretch: 100%
       fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: -0.025em
@@ -429,7 +426,6 @@ typography:
     $value:
       fontFamily: '{typography.family.heading}'
       fontSize: 1.875rem
-      fontStretch: 100%
       fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: -0.025em
@@ -439,7 +435,6 @@ typography:
     $value:
       fontFamily: '{typography.family.heading}'
       fontSize: 1.375rem
-      fontStretch: 100%
       fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: -0.025em
@@ -449,7 +444,6 @@ typography:
     $value:
       fontFamily: '{typography.family.base}'
       fontSize: 0.75rem
-      fontStretch: 100%
       fontVariationSettings: '"wght" 400, "ital" 0, "opsz" 12'
       fontWeight: 400
       letterSpacing: 0
@@ -459,7 +453,6 @@ typography:
     $value:
       fontFamily: '{typography.family.base}'
       fontSize: 0.875rem
-      fontStretch: 100%
       fontVariationSettings: '"wght" 400, "ital" 0, "opsz" auto'
       fontWeight: 400
       letterSpacing: 0

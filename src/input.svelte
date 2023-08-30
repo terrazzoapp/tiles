@@ -46,9 +46,12 @@
 		@include typography('typography.base');
 
 		color: token('color.ui.contrast.90');
+		gap: var(--gap);
+		display: flex;
+		flex-direction: column;
 		font-variant-numeric: tabular-nums;
-		position: relative;
 		min-width: 0;
+		position: relative;
 		z-index: token('layer.base');
 
 		&[data-size='s'] {
@@ -76,6 +79,7 @@
 		border-radius: var(--radius);
 		color: inherit;
 		display: block;
+		flex: 1 1 auto;
 		height: var(--height);
 		line-height: var(--height);
 		min-width: 0;
@@ -107,7 +111,6 @@
 
 		color: token('color.ui.contrast.90');
 		display: block;
-		margin-bottom: calc(0.5 * var(--padding));
 		opacity: 0.75;
 	}
 

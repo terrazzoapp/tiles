@@ -8,51 +8,6 @@
 @use "sass:map";
 
 $__token-values: (
-  "color.gray.10": (
-    default: (var(--color-gray-10)),
-  ),
-  "color.gray.15": (
-    default: (var(--color-gray-15)),
-  ),
-  "color.gray.20": (
-    default: (var(--color-gray-20)),
-  ),
-  "color.gray.25": (
-    default: (var(--color-gray-25)),
-  ),
-  "color.gray.30": (
-    default: (var(--color-gray-30)),
-  ),
-  "color.gray.35": (
-    default: (var(--color-gray-35)),
-  ),
-  "color.gray.40": (
-    default: (var(--color-gray-40)),
-  ),
-  "color.gray.50": (
-    default: (var(--color-gray-50)),
-  ),
-  "color.gray.60": (
-    default: (var(--color-gray-60)),
-  ),
-  "color.gray.70": (
-    default: (var(--color-gray-70)),
-  ),
-  "color.gray.80": (
-    default: (var(--color-gray-80)),
-  ),
-  "color.gray.85": (
-    default: (var(--color-gray-85)),
-  ),
-  "color.gray.90": (
-    default: (var(--color-gray-90)),
-  ),
-  "color.gray.95": (
-    default: (var(--color-gray-95)),
-  ),
-  "color.gray.100": (
-    default: (var(--color-gray-100)),
-  ),
   "color.black": (
     default: (var(--color-black)),
   ),
@@ -97,6 +52,51 @@ $__token-values: (
   ),
   "color.blue.100": (
     default: (var(--color-blue-100)),
+  ),
+  "color.gray.10": (
+    default: (var(--color-gray-10)),
+  ),
+  "color.gray.15": (
+    default: (var(--color-gray-15)),
+  ),
+  "color.gray.20": (
+    default: (var(--color-gray-20)),
+  ),
+  "color.gray.25": (
+    default: (var(--color-gray-25)),
+  ),
+  "color.gray.30": (
+    default: (var(--color-gray-30)),
+  ),
+  "color.gray.35": (
+    default: (var(--color-gray-35)),
+  ),
+  "color.gray.40": (
+    default: (var(--color-gray-40)),
+  ),
+  "color.gray.50": (
+    default: (var(--color-gray-50)),
+  ),
+  "color.gray.60": (
+    default: (var(--color-gray-60)),
+  ),
+  "color.gray.70": (
+    default: (var(--color-gray-70)),
+  ),
+  "color.gray.80": (
+    default: (var(--color-gray-80)),
+  ),
+  "color.gray.85": (
+    default: (var(--color-gray-85)),
+  ),
+  "color.gray.90": (
+    default: (var(--color-gray-90)),
+  ),
+  "color.gray.95": (
+    default: (var(--color-gray-95)),
+  ),
+  "color.gray.100": (
+    default: (var(--color-gray-100)),
   ),
   "color.green.10": (
     default: (var(--color-green-10)),
@@ -182,30 +182,6 @@ $__token-values: (
   "color.red.100": (
     default: (var(--color-red-100)),
   ),
-  "color.yellow.70": (
-    default: (var(--color-yellow-70)),
-  ),
-  "color.yellow.75": (
-    default: (var(--color-yellow-75)),
-  ),
-  "color.yellow.80": (
-    default: (var(--color-yellow-80)),
-  ),
-  "color.yellow.85": (
-    default: (var(--color-yellow-85)),
-  ),
-  "color.yellow.90": (
-    default: (var(--color-yellow-90)),
-  ),
-  "color.yellow.92": (
-    default: (var(--color-yellow-92)),
-  ),
-  "color.yellow.95": (
-    default: (var(--color-yellow-95)),
-  ),
-  "color.white": (
-    default: (var(--color-white)),
-  ),
   "color.ui.action.base": (
     default: (var(--color-ui-action-base)),
     "light": (var(--color-ui-action-base)),
@@ -235,6 +211,16 @@ $__token-values: (
     default: (var(--color-ui-bg-offset)),
     "light": (var(--color-ui-bg-offset)),
     "dark": (var(--color-ui-bg-offset)),
+  ),
+  "color.ui.contrast.00": (
+    default: (var(--color-ui-contrast-00)),
+    "light": (var(--color-ui-contrast-00)),
+    "dark": (var(--color-ui-contrast-00)),
+  ),
+  "color.ui.contrast.05": (
+    default: (var(--color-ui-contrast-05)),
+    "light": (var(--color-ui-contrast-05)),
+    "dark": (var(--color-ui-contrast-05)),
   ),
   "color.ui.contrast.10": (
     default: (var(--color-ui-contrast-10)),
@@ -296,16 +282,6 @@ $__token-values: (
     "light": (var(--color-ui-contrast-95)),
     "dark": (var(--color-ui-contrast-95)),
   ),
-  "color.ui.contrast.00": (
-    default: (var(--color-ui-contrast-00)),
-    "light": (var(--color-ui-contrast-00)),
-    "dark": (var(--color-ui-contrast-00)),
-  ),
-  "color.ui.contrast.05": (
-    default: (var(--color-ui-contrast-05)),
-    "light": (var(--color-ui-contrast-05)),
-    "dark": (var(--color-ui-contrast-05)),
-  ),
   "color.ui.error.base": (
     default: (var(--color-ui-error-base)),
     "light": (var(--color-ui-error-base)),
@@ -326,14 +302,14 @@ $__token-values: (
     "light": (var(--color-ui-error-text)),
     "dark": (var(--color-ui-error-text)),
   ),
-  "color.ui.focus": (
-    default: (var(--color-ui-focus)),
-  ),
   "color.ui.fg": (
     default: (var(--color-ui-fg)),
   ),
   "color.ui.fg-subdue": (
     default: (var(--color-ui-fg-subdue)),
+  ),
+  "color.ui.focus": (
+    default: (var(--color-ui-focus)),
   ),
   "color.ui.success.base": (
     default: (var(--color-ui-success-base)),
@@ -375,14 +351,38 @@ $__token-values: (
     "light": (var(--color-ui-warn-text)),
     "dark": (var(--color-ui-warn-text)),
   ),
+  "color.white": (
+    default: (var(--color-white)),
+  ),
+  "color.yellow.70": (
+    default: (var(--color-yellow-70)),
+  ),
+  "color.yellow.75": (
+    default: (var(--color-yellow-75)),
+  ),
+  "color.yellow.80": (
+    default: (var(--color-yellow-80)),
+  ),
+  "color.yellow.85": (
+    default: (var(--color-yellow-85)),
+  ),
+  "color.yellow.90": (
+    default: (var(--color-yellow-90)),
+  ),
+  "color.yellow.92": (
+    default: (var(--color-yellow-92)),
+  ),
+  "color.yellow.95": (
+    default: (var(--color-yellow-95)),
+  ),
   "ease.circ-in": (
     default: (var(--ease-circ-in)),
   ),
-  "ease.circ-out": (
-    default: (var(--ease-circ-out)),
-  ),
   "ease.circ-in-out": (
     default: (var(--ease-circ-in-out)),
+  ),
+  "ease.circ-out": (
+    default: (var(--ease-circ-out)),
   ),
   "ease.cubic-in": (
     default: (var(--ease-cubic-in)),
@@ -396,98 +396,29 @@ $__token-values: (
   "ease.linear": (
     default: (var(--ease-linear)),
   ),
-  "timing.quick": (
-    default: (var(--timing-quick)),
-  ),
-  "timing.deliberate": (
-    default: (var(--timing-deliberate)),
-  ),
-  "timing.slow": (
-    default: (var(--timing-slow)),
-  ),
-  "typography.family.base": (
-    default: (var(--typography-family-base)),
-  ),
-  "typography.family.mono": (
-    default: (var(--typography-family-mono)),
-  ),
-  "typography.family.heading": (
-    default: (var(--typography-family-heading)),
-  ),
-  "typography.base": (
-    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.base\")` instead.",
-  ),
-  "typography.mono": (
-    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.mono\")` instead.",
-  ),
-  "typography.h1": (
-    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h1\")` instead.",
-  ),
-  "typography.h2": (
-    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h2\")` instead.",
-  ),
-  "typography.h3": (
-    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h3\")` instead.",
-  ),
-  "typography.footnote": (
-    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.footnote\")` instead.",
-  ),
-  "typography.label": (
-    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.label\")` instead.",
+  "layer.alert": (
+    default: (var(--layer-alert)),
   ),
   "layer.base": (
     default: (var(--layer-base)),
   ),
-  "layer.focus": (
-    default: (var(--layer-focus)),
-  ),
   "layer.float": (
     default: (var(--layer-float)),
   ),
-  "layer.popover": (
-    default: (var(--layer-popover)),
-  ),
-  "layer.nav": (
-    default: (var(--layer-nav)),
+  "layer.focus": (
+    default: (var(--layer-focus)),
   ),
   "layer.modal": (
     default: (var(--layer-modal)),
   ),
-  "layer.alert": (
-    default: (var(--layer-alert)),
+  "layer.nav": (
+    default: (var(--layer-nav)),
+  ),
+  "layer.popover": (
+    default: (var(--layer-popover)),
   ),
   "shadow.base": (
     default: (var(--shadow-base)),
-  ),
-  "size.s.gap": (
-    default: (var(--size-s-gap)),
-  ),
-  "size.s.height": (
-    default: (var(--size-s-height)),
-  ),
-  "size.s.padding": (
-    default: (var(--size-s-padding)),
-  ),
-  "size.s.radius": (
-    default: (var(--size-s-radius)),
-  ),
-  "size.s.textSize": (
-    default: (var(--size-s-textSize)),
-  ),
-  "size.m.gap": (
-    default: (var(--size-m-gap)),
-  ),
-  "size.m.height": (
-    default: (var(--size-m-height)),
-  ),
-  "size.m.padding": (
-    default: (var(--size-m-padding)),
-  ),
-  "size.m.radius": (
-    default: (var(--size-m-radius)),
-  ),
-  "size.m.textSize": (
-    default: (var(--size-m-textSize)),
   ),
   "size.l.gap": (
     default: (var(--size-l-gap)),
@@ -504,6 +435,75 @@ $__token-values: (
   "size.l.textSize": (
     default: (var(--size-l-textSize)),
   ),
+  "size.m.gap": (
+    default: (var(--size-m-gap)),
+  ),
+  "size.m.height": (
+    default: (var(--size-m-height)),
+  ),
+  "size.m.padding": (
+    default: (var(--size-m-padding)),
+  ),
+  "size.m.radius": (
+    default: (var(--size-m-radius)),
+  ),
+  "size.m.textSize": (
+    default: (var(--size-m-textSize)),
+  ),
+  "size.s.gap": (
+    default: (var(--size-s-gap)),
+  ),
+  "size.s.height": (
+    default: (var(--size-s-height)),
+  ),
+  "size.s.padding": (
+    default: (var(--size-s-padding)),
+  ),
+  "size.s.radius": (
+    default: (var(--size-s-radius)),
+  ),
+  "size.s.textSize": (
+    default: (var(--size-s-textSize)),
+  ),
+  "timing.deliberate": (
+    default: (var(--timing-deliberate)),
+  ),
+  "timing.quick": (
+    default: (var(--timing-quick)),
+  ),
+  "timing.slow": (
+    default: (var(--timing-slow)),
+  ),
+  "typography.base": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.base\")` instead.",
+  ),
+  "typography.family.base": (
+    default: (var(--typography-family-base)),
+  ),
+  "typography.family.heading": (
+    default: (var(--typography-family-heading)),
+  ),
+  "typography.family.mono": (
+    default: (var(--typography-family-mono)),
+  ),
+  "typography.footnote": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.footnote\")` instead.",
+  ),
+  "typography.h1": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h1\")` instead.",
+  ),
+  "typography.h2": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h2\")` instead.",
+  ),
+  "typography.h3": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.h3\")` instead.",
+  ),
+  "typography.label": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.label\")` instead.",
+  ),
+  "typography.mono": (
+    "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.mono\")` instead.",
+  ),
 );
 
 $__token-typography-mixins: (
@@ -511,7 +511,6 @@ $__token-typography-mixins: (
     default: (
       "font-family": (var(--typography-base-font-family)),
       "font-size": (var(--typography-base-font-size)),
-      "font-stretch": (var(--typography-base-font-stretch)),
       "font-style": (var(--typography-base-font-style)),
       "font-variation-settings": (var(--typography-base-font-variation-settings)),
       "font-weight": (var(--typography-base-font-weight)),
@@ -520,24 +519,21 @@ $__token-typography-mixins: (
       "text-transform": (var(--typography-base-text-transform)),
     ),
   ),
-  "typography.mono": (
+  "typography.footnote": (
     default: (
-      "font-family": (var(--typography-mono-font-family)),
-      "font-size": (var(--typography-mono-font-size)),
-      "font-stretch": (var(--typography-mono-font-stretch)),
-      "font-style": (var(--typography-mono-font-style)),
-      "font-variation-settings": (var(--typography-mono-font-variation-settings)),
-      "font-weight": (var(--typography-mono-font-weight)),
-      "letter-spacing": (var(--typography-mono-letter-spacing)),
-      "line-height": (var(--typography-mono-line-height)),
-      "text-transform": (var(--typography-mono-text-transform)),
+      "font-family": (var(--typography-footnote-font-family)),
+      "font-size": (var(--typography-footnote-font-size)),
+      "font-variation-settings": (var(--typography-footnote-font-variation-settings)),
+      "font-weight": (var(--typography-footnote-font-weight)),
+      "letter-spacing": (var(--typography-footnote-letter-spacing)),
+      "line-height": (var(--typography-footnote-line-height)),
+      "text-transform": (var(--typography-footnote-text-transform)),
     ),
   ),
   "typography.h1": (
     default: (
       "font-family": (var(--typography-h1-font-family)),
       "font-size": (var(--typography-h1-font-size)),
-      "font-stretch": (var(--typography-h1-font-stretch)),
       "font-variation-settings": (var(--typography-h1-font-variation-settings)),
       "font-weight": (var(--typography-h1-font-weight)),
       "letter-spacing": (var(--typography-h1-letter-spacing)),
@@ -549,7 +545,6 @@ $__token-typography-mixins: (
     default: (
       "font-family": (var(--typography-h2-font-family)),
       "font-size": (var(--typography-h2-font-size)),
-      "font-stretch": (var(--typography-h2-font-stretch)),
       "font-variation-settings": (var(--typography-h2-font-variation-settings)),
       "font-weight": (var(--typography-h2-font-weight)),
       "letter-spacing": (var(--typography-h2-letter-spacing)),
@@ -561,7 +556,6 @@ $__token-typography-mixins: (
     default: (
       "font-family": (var(--typography-h3-font-family)),
       "font-size": (var(--typography-h3-font-size)),
-      "font-stretch": (var(--typography-h3-font-stretch)),
       "font-variation-settings": (var(--typography-h3-font-variation-settings)),
       "font-weight": (var(--typography-h3-font-weight)),
       "letter-spacing": (var(--typography-h3-letter-spacing)),
@@ -569,28 +563,27 @@ $__token-typography-mixins: (
       "text-transform": (var(--typography-h3-text-transform)),
     ),
   ),
-  "typography.footnote": (
-    default: (
-      "font-family": (var(--typography-footnote-font-family)),
-      "font-size": (var(--typography-footnote-font-size)),
-      "font-stretch": (var(--typography-footnote-font-stretch)),
-      "font-variation-settings": (var(--typography-footnote-font-variation-settings)),
-      "font-weight": (var(--typography-footnote-font-weight)),
-      "letter-spacing": (var(--typography-footnote-letter-spacing)),
-      "line-height": (var(--typography-footnote-line-height)),
-      "text-transform": (var(--typography-footnote-text-transform)),
-    ),
-  ),
   "typography.label": (
     default: (
       "font-family": (var(--typography-label-font-family)),
       "font-size": (var(--typography-label-font-size)),
-      "font-stretch": (var(--typography-label-font-stretch)),
       "font-variation-settings": (var(--typography-label-font-variation-settings)),
       "font-weight": (var(--typography-label-font-weight)),
       "letter-spacing": (var(--typography-label-letter-spacing)),
       "line-height": (var(--typography-label-line-height)),
       "text-transform": (var(--typography-label-text-transform)),
+    ),
+  ),
+  "typography.mono": (
+    default: (
+      "font-family": (var(--typography-mono-font-family)),
+      "font-size": (var(--typography-mono-font-size)),
+      "font-style": (var(--typography-mono-font-style)),
+      "font-variation-settings": (var(--typography-mono-font-variation-settings)),
+      "font-weight": (var(--typography-mono-font-weight)),
+      "letter-spacing": (var(--typography-mono-letter-spacing)),
+      "line-height": (var(--typography-mono-line-height)),
+      "text-transform": (var(--typography-mono-text-transform)),
     ),
   ),
 );

@@ -8,12 +8,14 @@
 	export let type: 'button' | 'submit' = 'button';
 	/** href (only use if button is a link) */
 	export let href: string | undefined = undefined;
+	/** show borders? */
+	export let borderless = false;
 </script>
 
 {#if href}
-	<a {...omit($$props, ['color', 'href', 'size', 'type', 'variant'])} {href} class="button" {type} data-size={size}><slot /></a>
+	<a {...omit($$props, ['color', 'href', 'size', 'type', 'variant'])} {href} class="button" {type} data-size={size} data-borderless={borderless || undefined}><slot /></a>
 {:else}
-	<button {...omit($$props, ['color', 'size', 'type', 'variant'])} class="button" {type} data-size={size}><slot /></button>
+	<button {...omit($$props, ['color', 'size', 'type', 'variant'])} class="button" {type} data-size={size} data-borderless={borderless || undefined}><slot /></button>
 {/if}
 
 <style lang="scss">
@@ -68,6 +70,11 @@
 			--iconSize: #{token('size.l.textSize')};
 			--padding: #{token('size.l.padding')};
 			--radius: #{token('size.m.radius')};
+		}
+
+		// borderless
+		&[data-borderless='true'] {
+			--borderColor: transparent;
 		}
 
 		// states
