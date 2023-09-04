@@ -5,8 +5,7 @@
 
 	// props
 	export let id = `segmented-control-${nanoid(8)}`;
-
-	export let value: any;
+	export let value: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 
 	// state
 	const name = getContext<string>('segmented-control-name');

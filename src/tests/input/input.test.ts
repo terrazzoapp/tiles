@@ -1,11 +1,11 @@
 import { render } from '@testing-library/svelte';
 import { describe, expect, test } from 'vitest';
 import { axe } from '../helpers.js';
-import InputTextExample from './text.test.svelte';
-import InputNumberExample from './number.test.svelte';
-import InputEmailExample from './email.test.svelte';
-import InputPasswordExample from './password.test.svelte';
 import InputDateExample from './date.test.svelte';
+import InputEmailExample from './email.test.svelte';
+import InputNumberExample from './number.test.svelte';
+import InputPasswordExample from './password.test.svelte';
+import InputTextExample from './text.test.svelte';
 
 describe('Input', () => {
 	test('a11y: text', async () => {

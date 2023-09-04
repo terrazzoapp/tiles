@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { nanoid } from 'nanoid';
 	import { onMount } from 'svelte';
+	import { clamp } from './lib/number.js';
 	import { omit } from './lib/props.js';
 
 	// props
@@ -19,7 +20,7 @@
 	let trackRect = { left: 0, top: 0, x: 0, y: 0, width: 100, height: 4 } as DOMRect;
 
 	// reactivity
-	$: valuePercent = Math.min(Math.max((value - min) / (max - min), 0), 1);
+	$: valuePercent = clamp((value - min) / (max - min), 0, 1);
 
 	function recalcRects() {
 		if (trackEl) {
@@ -32,7 +33,7 @@
 		isDragging = true;
 	}
 	function handlePointerMove(evt: PointerEvent) {
-		evt.preventDefault();
+		evt.preventDefault(); // this prevents touch scroll and unwanted text highlights
 		if (!isDragging) {
 			return;
 		}
@@ -145,6 +146,7 @@
 		gap: calc(2 * var(--padding));
 		grid-template-columns: auto 4rem;
 		transform: translateZ(0);
+		user-select: none; // don’t highlight text while dragging
 	}
 
 	.slider {

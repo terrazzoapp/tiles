@@ -10,19 +10,16 @@
 	setContext('segmented-control-name', name);
 
 	// reactivity
+	function handleChange(evt: Event) {
+		if ((evt.target as HTMLInputElement).value) {
+			value = (evt.target as HTMLInputElement).value;
+		}
+	}
+
 	$: setContext('segmented-control-value', value);
 </script>
 
-<fieldset
-	{...$$props}
-	class="segmented-control"
-	on:change={(evt) => {
-		const nextValue = evt.target.value;
-		if (value) {
-			value = nextValue;
-		}
-	}}
->
+<fieldset {...$$props} class="segmented-control" on:change={handleChange}>
 	<slot />
 </fieldset>
 
