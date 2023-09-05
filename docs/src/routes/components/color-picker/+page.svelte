@@ -1,9 +1,7 @@
 <script lang="ts">
 	import type { Oklch } from 'culori';
-	import { modeOklch, modeRgb, useMode } from 'culori/fn';
 	import ColorPicker from '../../../../../src/color-picker.svelte';
 	import Example from '../../../components/example.svelte';
-	import { onMount } from 'svelte';
 
 	const code =
 		`<script lang="ts"` +
@@ -15,21 +13,11 @@ let color: Oklch = { mode: 'oklch', l: 0.6, c: 0.165889, h: 252 };
 </script` +
 		`>
 
-<ColorPicker bind:color={color} /` +
+<ColorPicker bind:color /` +
 		`>`;
 
 	// state
 	let color: Oklch = { mode: 'oklch', l: 0.6, c: 0.165889, h: 252 };
-	let supportsP3 = false;
-
-	useMode(modeOklch);
-	useMode(modeRgb);
-
-	onMount(() => {
-		if (typeof CSS !== 'undefined') {
-			supportsP3 = CSS.supports('color(display-p3 0 0 0)');
-		}
-	});
 </script>
 
 <svelte:head>
