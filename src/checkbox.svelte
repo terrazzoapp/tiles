@@ -6,7 +6,7 @@
 	export let checked: boolean;
 	export let label = '';
 	export let name: string | undefined;
-	export let value: string | undefined;
+	export let value: string | undefined = undefined;
 </script>
 
 <div class="checkbox">

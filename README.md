@@ -1,9 +1,9 @@
-# @terrazzo/glass
+# @terrazzo/tiles
 
 ### Installation
 
 ```sh
-npm i @terrazzo/glass
+npm i @terrazzo/tiles
 ```
 
 ### Docs
