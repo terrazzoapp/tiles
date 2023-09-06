@@ -44,7 +44,8 @@
 		} else if (channel === 'alpha') {
 			clampedValue = snap(clamp(value / 100, 0, 1), ALPHA_PRECISION);
 		}
-		color = clampChroma(toOklch({ ...color, [channel]: clampedValue })!, 'oklch');
+		color = clampChroma({ ...color, [channel]: clampedValue }!, 'oklch');
+		dispatch('change', color);
 	}
 	function updateRGB(value: number, channel: 'r' | 'g' | 'b') {
 		let clampedValue = clamp(value, 0, 255) / 255;
@@ -53,7 +54,6 @@
 	}
 
 	// reactivity
-
 	$: okhsv = { ...toOkhsv(clampChroma(color, 'oklch')), h: color.h ?? 0 }; // keep hue at lightness 0% and 100%
 	$: oklchDisplay = { l: snap(100 * color.l, L_PRECISION), c: snap(color.c, C_PRECISION), h: snap(color.h ?? 0, H_PRECISION), alpha: snap(100 * (color.alpha ?? 1), ALPHA_PRECISION) };
 	$: rgb = toRGB(color);
