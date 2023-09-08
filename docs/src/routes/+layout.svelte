@@ -23,6 +23,7 @@
 						<li><a href="/components/color-picker" aria-current={$page.url.pathname === '/components/color-picker' ? 'page' : undefined}>ColorPicker</a></li>
 						<li><a href="/components/color-ramp" aria-current={$page.url.pathname === '/components/color-ramp' ? 'page' : undefined}>ColorRamp</a></li>
 						<li><a href="/components/input" aria-current={$page.url.pathname === '/components/input' ? 'page' : undefined}>Input</a></li>
+						<li><a href="/components/lightness-scale" aria-current={$page.url.pathname === '/components/lightness-scale' ? 'page' : undefined}>LightnessScale</a></li>
 						<li><a href="/components/radio" aria-current={$page.url.pathname === '/components/radio' ? 'page' : undefined}>Radio</a></li>
 						<li><a href="/components/select" aria-current={$page.url.pathname === '/components/select' ? 'page' : undefined}>Select</a></li>
 						<li><a href="/components/segmented-control" aria-current={$page.url.pathname === '/components/segmented-control' ? 'page' : undefined}>SegmentedControl</a></li>

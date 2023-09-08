@@ -474,6 +474,9 @@ $__token-values: (
   "timing.slow": (
     default: (var(--timing-slow)),
   ),
+  "transition.base": (
+    default: (var(--transition-base)),
+  ),
   "typography.base": (
     "__cobalt-error": "This is a typography mixin. Use `@include typography(\"typography.base\")` instead.",
   ),

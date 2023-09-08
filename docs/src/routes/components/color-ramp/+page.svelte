@@ -51,6 +51,14 @@ let steps: Oklch[] = [
 
 	<p>Develop a palette using your eyeballs!</p>
 
+	<ul>
+		<li><kbd>↑</kbd> <kbd>↓</kbd>: change <b>Value</b></li>
+		<li><kbd>←</kbd> <kbd>→</kbd>: change <b>Saturation</b></li>
+		<li><kbd>Alt + ←</kbd> <kbd>Alt + →</kbd>: change <b>Hue</b></li>
+		<li><kbd>Alt + ↑</kbd> <kbd>Alt + ↓</kbd>: prev/next color</li>
+		<li><kbd>Shift</kbd>: move in larger increments</li>
+	</ul>
+
 	<h2>Example</h2>
 
 	<Example {code}>

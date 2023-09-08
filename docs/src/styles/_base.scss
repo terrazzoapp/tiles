@@ -49,3 +49,20 @@ strong,
 b {
 	font-variation-settings: 'wght' 700;
 }
+
+pre,
+code {
+	font-family: token('typography.family.mono');
+}
+
+kbd {
+	border: 1px solid token('color.ui.contrast.20');
+	border-radius: token('size.s.radius');
+	display: inline-flex;
+	font-family: token('typography.family.mono');
+	font-size: token('size.s.textSize');
+	height: 1.25em;
+	line-height: inherit;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}

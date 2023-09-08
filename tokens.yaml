@@ -520,3 +520,9 @@ size:
       $value: 0.5rem
     textSize:
       $value: 1rem
+transition:
+  $type: transition
+  base:
+    $value:
+      duration: '{timing.quick}'
+      timingFunction: '{ease.cubic-out}'

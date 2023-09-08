@@ -13,6 +13,10 @@ import Input from '@terrazzo/tiles/input.svelte';
 		`>`;
 </script>
 
+<svelte:head>
+	<title>Input</title>
+</svelte:head>
+
 <div class="content">
 	<h1>Input</h1>
 

@@ -139,6 +139,7 @@
   --timing-deliberate: 200ms;
   --timing-quick: 100ms;
   --timing-slow: 1000ms;
+  --transition-base: var(--timing-quick) 0ms var(--ease-cubic-out);
   --typography-base-font-family: var(--typography-family-base);
   --typography-base-font-size: var(--size-m-textSize);
   --typography-base-font-style: normal;

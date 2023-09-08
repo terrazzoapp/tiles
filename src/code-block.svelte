@@ -111,6 +111,7 @@
 	.codeBlock {
 		@include typography('typography.mono');
 
+		background: #292d3e; // default BG
 		border-radius: token('size.s.radius');
 		color: token('color.white');
 		display: flex;
