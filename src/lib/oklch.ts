@@ -255,9 +255,14 @@ vec3 oklch_to_srgb(vec3 oklch, bool clamp_chroma) {
 	vec3 linear_srgb = oklab_to_linear_srgb(oklab);
 	vec3 srgb = linear_srgb_to_srgb(linear_srgb);
 
+	// for anything sufficiently dark, return 0,0,0 (rather than negative RGB values)
+	if (srgb.x < 0.001 && srgb.y < 0.001 && srgb.z < 0.001) {
+		return vec3(0.0, 0.0, 0.0);
+	}
+
 	// if color is out of sRGB range (0.0, 1.0), use the “Preserve light, clamp Chroma” method
 	// https://bottosson.github.io/posts/gamutclipping/
-	if ((srgb.x > 1.001 || srgb.x < -0.001 || srgb.y > 1.001 || srgb.y < -0.001 || srgb.z > 1.001 || srgb.z < -0.001) && clamp_chroma) {
+	if (clamp_chroma && (srgb.x > 1.001 || srgb.y > 1.001 || srgb.z > 1.001)) {
 		float eps = 0.00001;
 		float c = max(eps, sqrt(pow(oklab.y, 2.0) + pow(oklab.z, 2.0)));
 		float l_gamut = max(min(oklab.x, 1.0), 0.0);

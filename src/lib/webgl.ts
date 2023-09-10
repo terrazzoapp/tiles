@@ -11,8 +11,8 @@ export function createRenderingContext(canvas: HTMLCanvasElement): WebGL2Renderi
 		throw new Error('Could not get WebGL context');
 	}
 	const canvasRect = canvas.getBoundingClientRect();
-	canvas.width = canvasRect.width;
-	canvas.height = canvasRect.height;
+	canvas.width = canvasRect.width * devicePixelRatio;
+	canvas.height = canvasRect.height * devicePixelRatio;
 	gl.viewport(0, 0, canvasRect.width, canvasRect.height);
 
 	return gl;

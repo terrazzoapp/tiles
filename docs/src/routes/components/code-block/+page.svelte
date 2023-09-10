@@ -5,7 +5,7 @@
 	const code =
 		`<script lang="ts"` +
 		`>
-import CodeBlock from '@terrazzo/tiles/code-block.svelte';
+  import CodeBlock from '@terrazzo/tiles/code-block.svelte';
 </script` +
 		`>
 

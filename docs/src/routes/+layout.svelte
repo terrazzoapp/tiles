@@ -19,6 +19,7 @@
 					<ul>
 						<li><a href="/components/button" aria-current={$page.url.pathname === '/components/button' ? 'page' : undefined}>Button</a></li>
 						<li><a href="/components/checkbox" aria-current={$page.url.pathname === '/components/checkbox' ? 'page' : undefined}>Checkbox</a></li>
+						<li><a href="/components/chroma-triangle" aria-current={$page.url.pathname === '/components/chroma-triangle' ? 'page' : undefined}>ChromaTriangle</a></li>
 						<li><a href="/components/code-block" aria-current={$page.url.pathname === '/components/code-block' ? 'page' : undefined}>CodeBlock</a></li>
 						<li><a href="/components/color-picker" aria-current={$page.url.pathname === '/components/color-picker' ? 'page' : undefined}>ColorPicker</a></li>
 						<li><a href="/components/color-ramp" aria-current={$page.url.pathname === '/components/color-ramp' ? 'page' : undefined}>ColorRamp</a></li>

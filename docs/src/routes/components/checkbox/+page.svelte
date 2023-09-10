@@ -5,9 +5,9 @@
 	const code =
 		`<script lang="ts"` +
 		`>
-import Checkbox from '@terrazzo/tiles/checkbox.svelte';
+  import Checkbox from '@terrazzo/tiles/checkbox.svelte';
 
-let isChecked = false;
+  let isChecked = false;
 </script` +
 		`>
 

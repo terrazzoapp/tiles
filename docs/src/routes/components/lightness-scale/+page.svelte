@@ -1,33 +1,53 @@
 <script lang="ts">
-	import { type Oklch } from 'culori';
+	import { clampChroma, modeOklch, modeRgb, useMode } from 'culori/fn';
 	import Example from '../../../components/example.svelte';
 	import LightnessScale from '../../../../../src/lightness-scale.svelte';
+	import * as palettes from '../../../lib/open-color.js';
+	import Select from '../../../../../src/select.svelte';
+	import FormRow from '../../../../../src/form-row.svelte';
+
+	useMode(modeRgb);
+	const toOklch = useMode(modeOklch);
+	const curves = {
+		Linear: [0, 0, 1, 1] as [number, number, number, number],
+		'Sine (In)': [0.12, 0, 0.39, 0] as [number, number, number, number],
+		'Sine (In–Out)': [0.37, 0, 0.63, 1] as [number, number, number, number],
+		'Sine (Out)': [0.61, 1, 0.88, 1] as [number, number, number, number],
+		'Cubic (In)': [0.32, 0, 0.67, 0] as [number, number, number, number],
+		'Cubic (In–Out)': [0.65, 0, 0.35, 1] as [number, number, number, number],
+		'Cubic (Out)': [0.33, 1, 0.68, 1] as [number, number, number, number],
+	};
 
 	// state
-	let ramp: Oklch[] = [
-		{ mode: 'oklch', l: 0.96267849, c: 0.020046, h: 238.661395 },
-		{ mode: 'oklch', l: 0.92658376, c: 0.039464, h: 240.005609 },
-		{ mode: 'oklch', l: 0.86018483, c: 0.07594, h: 241.664871 },
-		{ mode: 'oklch', l: 0.78198189, c: 0.114657, h: 243.826281 },
-		{ mode: 'oklch', l: 0.71798902, c: 0.142157, h: 246.060937 },
-		{ mode: 'oklch', l: 0.66890612, c: 0.157454, h: 248.31816 },
-		{ mode: 'oklch', l: 0.62588981, c: 0.16415, h: 250.286502 },
-		{ mode: 'oklch', l: 0.58562488, c: 0.159142, h: 251.2582 },
-		{ mode: 'oklch', l: 0.54263076, c: 0.14852, h: 251.665838 },
-		{ mode: 'oklch', l: 0.49717505, c: 0.133376, h: 251.590878 },
-	];
+	let selectedPalette: keyof typeof palettes = 'violet';
+	let ramp = Object.values(palettes[selectedPalette]).map((c) => toOklch(c)!);
+	let selectedCurve: keyof typeof curves = 'Linear';
 	const code =
 		`<script lang="ts"` +
 		`>
-import LightnessScale from '@terrazzo/tiles/lightness-scale.svelte';
+  import LightnessScale from '@terrazzo/tiles/lightness-scale.svelte';
+  import { modeOklch, modeRgb, useMode } from 'culori/fn';
+
+  useMode(modeRgb);
+  const toOklch = useMode(modeOklch);
+
+  let hue = 240;
+  let chroma = 0.2;
+  let ramp = [color1, color2, color3, color4].map((c) => toOklch(c));
+  let curve = [0.37, 0, 0.63, 1]; // optional: display a curve behind scale
 </script` +
 		`>
 
-<LightnessScale /` +
+<LightnessScale {hue} {chroma} {ramp} {curve} /` +
 		`>`;
 
 	// reactivity
-	$: highestChroma = ramp.reduce((highChroma, step) => (step.c > highChroma.c ? step : highChroma), ramp[0]!);
+	$: {
+		if (palettes[selectedPalette]) {
+			ramp = Object.values(palettes[selectedPalette]).map((c) => toOklch(c)!);
+		}
+	}
+	$: highestChroma = ramp.reduce((highChroma, step) => (clampChroma(step, 'rgb').c > highChroma.c ? step : highChroma), clampChroma(ramp[0]!, 'rgb'));
 </script>
 
 <svelte:head>
@@ -42,6 +62,10 @@ import LightnessScale from '@terrazzo/tiles/lightness-scale.svelte';
 	<h2>Example</h2>
 
 	<Example {code}>
-		<LightnessScale hue={highestChroma.h ?? 0} chroma={highestChroma.c} {ramp} curve={[0.37, 0, 0.63, 1]} />
+		<FormRow>
+			<Select label="Palette" name="palette" options={Object.keys(palettes).map((name) => ({ label: name, value: name }))} bind:value={selectedPalette} />
+			<Select label="Curve" name="curve" options={[{ label: 'None', value: '' }, ...Object.keys(curves).map((name) => ({ label: name, value: name }))]} bind:value={selectedCurve} />
+		</FormRow>
+		<LightnessScale hue={highestChroma.h ?? 0} chroma={highestChroma.c} {ramp} curve={curves[selectedCurve]} />
 	</Example>
 </div>

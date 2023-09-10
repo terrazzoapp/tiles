@@ -1,45 +1,29 @@
 <script lang="ts">
-	import type { Oklch } from 'culori';
+	import { modeOklch, modeRgb, useMode } from 'culori';
 	import ColorRamp from '../../../../../src/color-ramp.svelte';
 	import Example from '../../../components/example.svelte';
+	import { blue } from '../../../lib/open-color.js';
+
+	useMode(modeRgb);
+	const toOklch = useMode(modeOklch);
 
 	const code =
 		`<script lang="ts"` +
 		`>
-import type { Oklch } from 'culori';
-import ColorRamp from '@terrazzo/tiles/color-ramp.svelte';
+  import { useMode, modeRgb, modeOklch } from 'culori';
+  import ColorRamp from '@terrazzo/tiles/color-ramp.svelte';
 
-let steps: Oklch[] = [
-  { mode: 'oklch', l: 0.96267849, c: 0.020046, h: 238.661395 },
-  { mode: 'oklch', l: 0.92658376, c: 0.039464, h: 240.005609 },
-  { mode: 'oklch', l: 0.86018483, c: 0.07594, h: 241.664871 },
-  { mode: 'oklch', l: 0.78198189, c: 0.114657, h: 243.826281 },
-  { mode: 'oklch', l: 0.71798902, c: 0.142157, h: 246.060937 },
-  { mode: 'oklch', l: 0.66890612, c: 0.157454, h: 248.31816 },
-  { mode: 'oklch', l: 0.62588981, c: 0.16415, h: 250.286502 },
-  { mode: 'oklch', l: 0.58562488, c: 0.159142, h: 251.2582 },
-  { mode: 'oklch', l: 0.54263076, c: 0.14852, h: 251.665838 },
-  { mode: 'oklch', l: 0.49717505, c: 0.133376, h: 251.590878 },
-];
+  useMode(modeRgb);
+  const toOklch = useMode(modeOklch);
+
+  let steps = [color1, color2, color3, color4].map((c) => toOklch(c));
 </script` +
 		`>
 
 <ColorRamp bind:steps /` +
 		`>`;
 
-	// state
-	let steps: Oklch[] = [
-		{ mode: 'oklch', l: 0.96267849, c: 0.020046, h: 238.661395 },
-		{ mode: 'oklch', l: 0.92658376, c: 0.039464, h: 240.005609 },
-		{ mode: 'oklch', l: 0.86018483, c: 0.07594, h: 241.664871 },
-		{ mode: 'oklch', l: 0.78198189, c: 0.114657, h: 243.826281 },
-		{ mode: 'oklch', l: 0.71798902, c: 0.142157, h: 246.060937 },
-		{ mode: 'oklch', l: 0.66890612, c: 0.157454, h: 248.31816 },
-		{ mode: 'oklch', l: 0.62588981, c: 0.16415, h: 250.286502 },
-		{ mode: 'oklch', l: 0.58562488, c: 0.159142, h: 251.2582 },
-		{ mode: 'oklch', l: 0.54263076, c: 0.14852, h: 251.665838 },
-		{ mode: 'oklch', l: 0.49717505, c: 0.133376, h: 251.590878 },
-	];
+	let steps = Object.values(blue).map((c) => toOklch(c));
 </script>
 
 <svelte:head>

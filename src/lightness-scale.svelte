@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { LightnessScale } from './lib/lightness-scale.js';
 	import type { Oklch } from 'culori';
+	import { onMount } from 'svelte';
+	import LightnessScale from './lib/lightness-scale.js';
 
 	// props
 	export let hue: number;
@@ -68,8 +68,8 @@
 		width: calc(100% - 2 * var(--padding));
 
 		&-line {
-			stroke: rgba(0, 0, 0, 0.25);
-			stroke-width: 1.5;
+			stroke: rgba(0, 0, 0, 0.5);
+			stroke-width: 0.75;
 		}
 	}
 

@@ -6,10 +6,10 @@
 	const code =
 		`<script lang="ts"` +
 		`>
-import type { Oklch } from 'culori';
-import ColorPicker from '@terrazzo/tiles/color-picker.svelte';
+  import type { Oklch } from 'culori';
+  import ColorPicker from '@terrazzo/tiles/color-picker.svelte';
 
-let color: Oklch = { mode: 'oklch', l: 0.6, c: 0.165889, h: 252 };
+  let color: Oklch = { mode: 'oklch', l: 0.6, c: 0.165889, h: 252 };
 </script` +
 		`>
 

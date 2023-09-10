@@ -5,7 +5,7 @@
 	const code =
 		`<script lang="ts"` +
 		`>
-import Button from '@terrazzo/tiles/button.svelte';
+  import Button from '@terrazzo/tiles/button.svelte';
 </script` +
 		`>
 
