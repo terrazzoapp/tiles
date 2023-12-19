@@ -302,14 +302,23 @@ $__token-values: (
     "light": (var(--color-ui-error-text)),
     "dark": (var(--color-ui-error-text)),
   ),
-  "color.ui.fg": (
-    default: (var(--color-ui-fg)),
-  ),
-  "color.ui.fg-subdue": (
-    default: (var(--color-ui-fg-subdue)),
-  ),
   "color.ui.focus": (
     default: (var(--color-ui-focus)),
+  ),
+  "color.ui.input.bg": (
+    default: (var(--color-ui-input-bg)),
+    "light": (var(--color-ui-input-bg)),
+    "dark": (var(--color-ui-input-bg)),
+  ),
+  "color.ui.input.border": (
+    default: (var(--color-ui-input-border)),
+    "light": (var(--color-ui-input-border)),
+    "dark": (var(--color-ui-input-border)),
+  ),
+  "color.ui.input.text": (
+    default: (var(--color-ui-input-text)),
+    "light": (var(--color-ui-input-text)),
+    "dark": (var(--color-ui-input-text)),
   ),
   "color.ui.success.base": (
     default: (var(--color-ui-success-base)),
@@ -330,6 +339,16 @@ $__token-values: (
     default: (var(--color-ui-success-text)),
     "light": (var(--color-ui-success-text)),
     "dark": (var(--color-ui-success-text)),
+  ),
+  "color.ui.text": (
+    default: (var(--color-ui-text)),
+    "light": (var(--color-ui-text)),
+    "dark": (var(--color-ui-text)),
+  ),
+  "color.ui.text-subdue": (
+    default: (var(--color-ui-text-subdue)),
+    "light": (var(--color-ui-text-subdue)),
+    "dark": (var(--color-ui-text-subdue)),
   ),
   "color.ui.warn.base": (
     default: (var(--color-ui-warn-base)),

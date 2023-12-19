@@ -117,7 +117,7 @@
 		background: none;
 		border-radius: 0;
 		border: none;
-		color: token('color.ui.fg');
+		color: token('color.ui.text');
 		font-family: token('typography.family.mono');
 		font-size: var(--textSize);
 		font-variant-numeric: tabular-nums;

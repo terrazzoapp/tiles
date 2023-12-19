@@ -27,7 +27,7 @@
 		--height: #{token('size.m.height')};
 		--padding: #{token('size.m.padding')};
 		--radius: #{token('size.m.radius')};
-		--textColor: #{color('color.ui.fg')};
+		--textColor: #{color('color.ui.text')};
 		--textSize: #{token('size.m.textSize')};
 		--borderColor: color-mix(in oklab, currentColor, 60% transparent);
 

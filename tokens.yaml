@@ -263,6 +263,25 @@ color:
           mode:
             light: '{color.gray.10}'
             dark: '{color.gray.95}'
+    input:
+      bg:
+        $value: '{color.ui.bg}'
+        $extensions:
+          mode:
+            light: '{color.ui.bg#light}'
+            dark: '{color.ui.bg#dark}'
+      border:
+        $value: '{color.ui.contrast.30}'
+        $extensions:
+          mode:
+            light: '{color.ui.contrast.30#light}'
+            dark: '{color.ui.contrast.30#dark}'
+      text:
+        $value: '{color.ui.bg}'
+        $extensions:
+          mode:
+            light: '{color.ui.text#light}'
+            dark: '{color.ui.text#dark}'
     error:
       base:
         $value: '{color.red.60}'
@@ -290,12 +309,6 @@ color:
             dark: '{color.red.60}'
     focus:
       $value: '{color.blue.60}'
-    fg:
-      $description: The default foreground color. This is by default high contrast with the background.
-      $value: '{color.ui.contrast.90}'
-    fg-subdue:
-      $description: A slightly less-contrast-y foreground color. Used for text that is less important than default.
-      $value: '{color.ui.contrast.70}'
     success:
       base:
         $value: '{color.green.60}'
@@ -321,6 +334,20 @@ color:
           mode:
             light: '{color.green.95}'
             dark: '{color.green.60}'
+    text:
+      $description: The default foreground color. This is by default high contrast with the background.
+      $value: '{color.ui.contrast.90}'
+      $extensions:
+        mode:
+          light: '{color.ui.contrast.90#light}'
+          dark: '{color.ui.contrast.90#dark}'
+    text-subdue:
+      $description: A slightly less-contrast-y foreground color. Used for text that is less important than default.
+      $value: '{color.ui.contrast.70}'
+      $extensions:
+        mode:
+          light: '{color.ui.contrast.70#light}'
+          dark: '{color.ui.contrast.70#dark}'
     warn:
       base:
         $value: '{color.yellow.80}'

@@ -38,7 +38,7 @@
 			background: none;
 			border-bottom: 2px solid transparent;
 			border-radius: 0;
-			color: token('color.ui.fg');
+			color: token('color.ui.text');
 			cursor: pointer;
 			display: flex;
 			font-size: var(--textSize);

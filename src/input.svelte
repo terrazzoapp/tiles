@@ -61,14 +61,17 @@
 	@use '../tokens' as *;
 
 	.input {
-		--height: #{token('size.m.height')};
+		--bg: #{token('color.ui.input.bg')};
+		--borderColor: #{token('color.ui.input.border')};
 		--gap: #{token('size.m.gap')};
+		--height: #{token('size.m.height')};
 		--padding: #{token('size.m.padding')};
+		--textColor: #{token('color.ui.input.text')};
 		--textSize: #{token('size.m.textSize')};
 
 		@include typography('typography.base');
 
-		color: token('color.ui.contrast.90');
+		color: var(--textColor);
 		gap: var(--gap);
 		display: flex;
 		flex-direction: column;
@@ -96,12 +99,13 @@
 		-moz-appearance: textfield;
 		-webkit-appearance: textfield;
 		appearance: textfield;
-		background: none;
+		background: var(--bg);
+		border: 1px solid var(--borderColor);
 		border-radius: 0;
-		border: 1px solid color-mix(in oklab, currentColor, 75% transparent);
-		color: inherit;
+		color: var(--textColor);
 		display: block;
 		flex: 1 1 auto;
+		font-size: var(--textSize);
 		font-variant-numeric: tabular-nums;
 		height: var(--height);
 		line-height: var(--height);

@@ -112,7 +112,7 @@
 		-webkit-appearance: textfield;
 		background: token('color.ui.bg');
 		border: 1px solid color-mix(in oklab, currentColor, 75% transparent);
-		color: token('color.ui.fg');
+		color: token('color.ui.text');
 		border-radius: var(--radius);
 		height: var(--height);
 		line-height: var(--height);
@@ -161,7 +161,7 @@
 		background-color: token('color.ui.bg');
 		border: 1px solid color-mix(in oklab, currentColor, 75% transparent);
 		border-radius: 50%;
-		color: token('color.ui.fg');
+		color: token('color.ui.text');
 		cursor: pointer;
 		display: block;
 		height: var(--size);

@@ -87,13 +87,16 @@
   --color-ui-error-bg: var(--color-red-95);
   --color-ui-error-border: var(--color-red-80);
   --color-ui-error-text: var(--color-red-95);
-  --color-ui-fg: var(--color-ui-contrast-90);
-  --color-ui-fg-subdue: var(--color-ui-contrast-70);
   --color-ui-focus: var(--color-blue-60);
+  --color-ui-input-bg: var(--color-ui-bg);
+  --color-ui-input-border: var(--color-ui-contrast-30);
+  --color-ui-input-text: var(--color-ui-bg);
   --color-ui-success-base: var(--color-green-60);
   --color-ui-success-bg: var(--color-green-95);
   --color-ui-success-border: var(--color-green-80);
   --color-ui-success-text: var(--color-green-95);
+  --color-ui-text: var(--color-ui-contrast-90);
+  --color-ui-text-subdue: var(--color-ui-contrast-70);
   --color-ui-warn-base: var(--color-yellow-80);
   --color-ui-warn-bg: var(--color-yellow-95);
   --color-ui-warn-border: var(--color-yellow-70);
@@ -222,10 +225,15 @@
     --color-ui-error-bg: var(--color-red-95);
     --color-ui-error-border: var(--color-red-80);
     --color-ui-error-text: var(--color-red-95);
+    --color-ui-input-bg: var(--color-ui-bg);
+    --color-ui-input-border: var(--color-ui-contrast-30);
+    --color-ui-input-text: var(--color-ui-text);
     --color-ui-success-base: var(--color-green-60);
     --color-ui-success-bg: var(--color-green-95);
     --color-ui-success-border: var(--color-green-80);
     --color-ui-success-text: var(--color-green-95);
+    --color-ui-text: var(--color-ui-contrast-90);
+    --color-ui-text-subdue: var(--color-ui-contrast-70);
     --color-ui-warn-base: var(--color-yellow-80);
     --color-ui-warn-bg: var(--color-yellow-95);
     --color-ui-warn-border: var(--color-yellow-70);
@@ -258,10 +266,15 @@
   --color-ui-error-bg: var(--color-red-95);
   --color-ui-error-border: var(--color-red-80);
   --color-ui-error-text: var(--color-red-95);
+  --color-ui-input-bg: var(--color-ui-bg);
+  --color-ui-input-border: var(--color-ui-contrast-30);
+  --color-ui-input-text: var(--color-ui-text);
   --color-ui-success-base: var(--color-green-60);
   --color-ui-success-bg: var(--color-green-95);
   --color-ui-success-border: var(--color-green-80);
   --color-ui-success-text: var(--color-green-95);
+  --color-ui-text: var(--color-ui-contrast-90);
+  --color-ui-text-subdue: var(--color-ui-contrast-70);
   --color-ui-warn-base: var(--color-yellow-80);
   --color-ui-warn-bg: var(--color-yellow-95);
   --color-ui-warn-border: var(--color-yellow-70);
@@ -294,10 +307,15 @@
     --color-ui-error-bg: var(--color-red-10);
     --color-ui-error-border: var(--color-red-20);
     --color-ui-error-text: var(--color-red-60);
+    --color-ui-input-bg: var(--color-ui-bg);
+    --color-ui-input-border: var(--color-ui-contrast-30);
+    --color-ui-input-text: var(--color-ui-text);
     --color-ui-success-base: var(--color-green-60);
     --color-ui-success-bg: var(--color-green-10);
     --color-ui-success-border: var(--color-green-20);
     --color-ui-success-text: var(--color-green-60);
+    --color-ui-text: var(--color-ui-contrast-90);
+    --color-ui-text-subdue: var(--color-ui-contrast-70);
     --color-ui-warn-base: var(--color-yellow-70);
     --color-ui-warn-bg: var(--color-yellow-70);
     --color-ui-warn-border: var(--color-yellow-70);
@@ -330,10 +348,15 @@
   --color-ui-error-bg: var(--color-red-10);
   --color-ui-error-border: var(--color-red-20);
   --color-ui-error-text: var(--color-red-60);
+  --color-ui-input-bg: var(--color-ui-bg);
+  --color-ui-input-border: var(--color-ui-contrast-30);
+  --color-ui-input-text: var(--color-ui-text);
   --color-ui-success-base: var(--color-green-60);
   --color-ui-success-bg: var(--color-green-10);
   --color-ui-success-border: var(--color-green-20);
   --color-ui-success-text: var(--color-green-60);
+  --color-ui-text: var(--color-ui-contrast-90);
+  --color-ui-text-subdue: var(--color-ui-contrast-70);
   --color-ui-warn-base: var(--color-yellow-70);
   --color-ui-warn-bg: var(--color-yellow-70);
   --color-ui-warn-border: var(--color-yellow-70);
@@ -409,3 +432,4 @@
     --shadow-base: 0 0.125rem 0 0 color(display-p3 0 0 0 / 0.10196078431372549);
   }
 }
+
